@@ -32,9 +32,11 @@ public class Player : MonoBehaviour
         control = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (control.x != 0)
         {
-            sr.flipX = control.x < 0;
+            transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
         }
         animator.SetBool("isWalking", control.magnitude != 0);
+        animator.SetBool("isShooting", Input.GetKeyDown(KeyCode.V));
+        animator.SetBool("isPunching", Input.GetKeyDown(KeyCode.G));
 
         rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, LimitsY.x, LimitsY.y));
