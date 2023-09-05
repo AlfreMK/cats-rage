@@ -15,6 +15,11 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
         Debug.Log(hitInfo.name);
+        // remove 25 health of the hit object
+        Player player = hitInfo.GetComponent<Player>();
+        if (player != null) {
+            player.TakeDamage(25);
+        }
         Destroy(gameObject);    // Destroy the bullet
     }
 
