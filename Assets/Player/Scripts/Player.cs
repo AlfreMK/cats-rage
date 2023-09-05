@@ -78,16 +78,21 @@ public class Player : MonoBehaviour
                 }
             }
         }
-
-        if (health <= 0)
-        {
-            health = maxHealth;
-        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
         Debug.Log("Player " + playerNumber + " has " + health + " health");
+        
+        if (health <= 0)
+        {
+            health = maxHealth;
+        }
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 }

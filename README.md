@@ -16,4 +16,4 @@
 ### Second player
 - Arrow keys: Move
 - `M`: Shoot
-- `J`: Punch
+- `J`: Heal
