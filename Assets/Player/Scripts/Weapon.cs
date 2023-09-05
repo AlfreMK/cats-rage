@@ -6,13 +6,22 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    [SerializeField] private int playerNumber = 1;
+    private string shootKey;
 
     // Update is called once per frame
+    void Awake() {
+        if (playerNumber == 1) {
+            shootKey = "Shoot";
+        } else if (playerNumber == 2) {
+            shootKey = "Shoot2";
+        }
+    }
+
     void Update() {
-        if (Input.GetKeyDown(KeyCode.V)) {
+        if (Input.GetButtonDown(shootKey)) {
             Shoot();
         }
-        
     }
 
     void Shoot() {

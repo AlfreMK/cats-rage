@@ -8,6 +8,12 @@
 
 ## Controls
 
+### First player
 - `WASD`: Move
 - `V`: Shoot
-- `G`: Melee attack
+- `G`: Punch
+
+### Second player
+- Arrow keys: Move
+- `M`: Shoot
+- `J`: Punch
