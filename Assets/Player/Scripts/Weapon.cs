@@ -6,12 +6,12 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public GameObject healPrefab = null;
     [SerializeField] private int playerNumber = 1;
     private string shootKey;
     private string punchKey;
+    private int healCooldown = 0;
+    private int healCooldownMax = 150;
 
-    // Update is called once per frame
     void Awake() {
         if (playerNumber == 1) {
             shootKey = "Shoot";
@@ -26,18 +26,42 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown(shootKey)) {
             Shoot();
         }
-        if (playerNumber == 2 && Input.GetButtonDown(punchKey)) {
-            Heal();
+        if (playerNumber == 1 && Input.GetButtonDown(punchKey)) {
+            Meele();
+        }
+        else if (playerNumber == 2 && Input.GetAxisRaw(punchKey) != 0) {
+            CoolDownFunction(Heal);
         }
     }
 
     void Shoot() {
-        // Shooting logic
         // Debug.Log("Shooting");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     void Heal() {
-        Instantiate(healPrefab, firePoint.position, firePoint.rotation);
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players) {
+            if (player.GetComponent<Player>() != null) {
+                player.GetComponent<Player>().TakeDamage(-10);
+            }
+        }
+    }
+
+    void Meele() {
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
+        if (hit.collider != null) {
+            if (hit.collider.gameObject.GetComponent<Player>() != null) {
+                hit.collider.gameObject.GetComponent<Player>().TakeDamage(40);
+            }
+        }
+    }
+
+    void CoolDownFunction(System.Action function) {
+        if (healCooldown < 0) {
+            healCooldown = healCooldownMax;
+            function();
+        }
+        healCooldown--;
     }
 }

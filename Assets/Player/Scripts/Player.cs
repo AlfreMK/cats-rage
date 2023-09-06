@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
-    private Animator animator;
+    public Animator animator;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,27 +63,16 @@ public class Player : MonoBehaviour
         }
         animator.SetBool("isWalking", control.magnitude != 0);
         animator.SetBool("isShooting", Input.GetButtonDown(shootKey));
-        animator.SetBool("isPunching", Input.GetButtonDown(punchKey));
+        animator.SetBool("isPunching", Input.GetAxisRaw(punchKey) != 0);
         rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, LimitsY.x, LimitsY.y));
         
-        
-        if (Input.GetButtonDown(punchKey)) {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1f);
-            if (hit.collider != null) {
-                Debug.Log(hit.collider.name);
-                Player player = hit.collider.GetComponent<Player>();
-                if (player != null) {
-                    player.TakeDamage(40);
-                }
-            }
-        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("Player " + playerNumber + " has " + health + " health");
+        // Debug.Log("Player " + playerNumber + " has " + health + " health");
         health = Mathf.Clamp(health, 0, maxHealth);
     }
 }
