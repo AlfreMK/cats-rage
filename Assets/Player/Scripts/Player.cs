@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
     static Vector2 LimitsY = new Vector2(-4.85f, -1.75f);
 
     // Start is called before the first frame update
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int health = 100;
+    [SerializeField] public int maxHealth = 100;
+    [SerializeField] public int health = 100;
     [SerializeField] private float verticalSpeed = 1.5f;
     [SerializeField] private float horizontalSpeed = 3f;
 
@@ -84,15 +84,6 @@ public class Player : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Player " + playerNumber + " has " + health + " health");
-        
-        if (health <= 0)
-        {
-            health = maxHealth;
-        }
-
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
+        health = Mathf.Clamp(health, 0, maxHealth);
     }
 }
