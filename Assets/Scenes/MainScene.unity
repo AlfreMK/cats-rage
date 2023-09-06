@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 1439645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.770848, y: 1.5634737, z: 1}
+  m_LocalPosition: {x: 0.24, y: -0.13, z: 0}
+  m_LocalScale: {x: 1.7910357, y: 1.6152247, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 59803395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 116775814}
   - component: {fileID: 116775817}
   - component: {fileID: 116775818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -395,8 +395,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -54597753
+  m_SortingLayer: 1
   m_SortingOrder: 227
   m_Sprite: {fileID: 249728345, guid: c9f8d4ad646656c4cb959ebd8658213b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -529,7 +529,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1302096154}
   bulletPrefab: {fileID: 8846705260052899089, guid: 70019723d11b1de43a1209a1c1129dd9, type: 3}
-  healPrefab: {fileID: 0}
   playerNumber: 1
 --- !u!114 &116775818
 MonoBehaviour:
@@ -884,7 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1302096154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1171,7 @@ GameObject:
   - component: {fileID: 1748922491}
   - component: {fileID: 1748922490}
   - component: {fileID: 1748922497}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: miku
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1193,7 +1192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 59803395}
   bulletPrefab: {fileID: 8846705260052899089, guid: 38941625cfebe1444be7c32b045548d3, type: 3}
-  healPrefab: {fileID: 8846705260052899089, guid: d0f6477f260967e4f856a75919c538b1, type: 3}
   playerNumber: 2
 --- !u!114 &1748922491
 MonoBehaviour:
@@ -1344,8 +1342,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -54597753
+  m_SortingLayer: 1
   m_SortingOrder: 404
   m_Sprite: {fileID: 1664888596, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1399,7 +1397,7 @@ GameObject:
   - component: {fileID: 1847273381}
   - component: {fileID: 1847273380}
   - component: {fileID: 1847273383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: magicHeal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
