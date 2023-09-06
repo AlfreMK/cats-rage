@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Players
   - Water
   - UI
-  - 
+  - Bullets
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Players
+    uniqueID: 4240369543
+    locked: 0
+  - name: Bullets
+    uniqueID: 670416193
     locked: 0

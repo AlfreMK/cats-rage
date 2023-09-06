@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private string shootKey;
     private string punchKey;
 
+
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     public Animator animator;
