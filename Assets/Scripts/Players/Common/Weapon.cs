@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     private string punchKey;
     private int healCooldown = 0;
     private int healCooldownMax = 150;
+    private Player player1;
+    private Player player2;
 
     void Awake() {
         if (playerNumber == 1) {
@@ -20,6 +22,8 @@ public class Weapon : MonoBehaviour
             shootKey = "Shoot2";
             punchKey = "Punch2";
         }
+        player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
+        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
     }
 
     void Update() {
@@ -40,12 +44,9 @@ public class Weapon : MonoBehaviour
     }
 
     void Heal() {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject player in players) {
-            if (player.GetComponent<Player>() != null) {
-                player.GetComponent<Player>().TakeDamage(-10);
-            }
-        }
+        // tags : "Player1", "Player2"
+        player1.TakeDamage(-10);
+        player2.TakeDamage(-10);
     }
 
     void Meele() {
