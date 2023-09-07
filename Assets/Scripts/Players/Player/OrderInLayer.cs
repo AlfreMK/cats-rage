@@ -18,4 +18,5 @@ public class OrderInLayer : MonoBehaviour
     {
         sr.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
     }
+
 }

@@ -16,9 +16,10 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
         Debug.Log(hitInfo.name);
-        Player player = hitInfo.GetComponent<Player>();
-        if (player != null) {
-            player.TakeDamage(damageBullet);
+        CanTakeDamage damageable = hitInfo.GetComponent<CanTakeDamage>();
+        
+        if (damageable != null) {
+            damageable.TakeDamage(damageBullet);
         }
         Destroy(gameObject);    // Destroy the bullet
     }
