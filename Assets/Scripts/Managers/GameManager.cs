@@ -18,13 +18,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player1.health <=0 && player2.health <= 0){
+        if ((player1 != null && player2 != null) &&
+            (player1.health <= 0 || player2.health <= 0)){
             SceneManager.LoadScene("MainScene");
-        };
+        }
 
-
-
-        
     }
 
     public Transform GetPlayer1()
