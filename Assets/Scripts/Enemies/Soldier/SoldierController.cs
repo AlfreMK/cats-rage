@@ -11,7 +11,8 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
     [SerializeField] public int health = 100;
 
     private Animator animator;
-    private Transform player;
+    private Transform player1;
+    private Transform player2;
 
 
     private static readonly int _animationIdle = Animator.StringToHash("Idle");
@@ -22,8 +23,8 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
     void Start()
     {
         animator = GetComponent<Animator>();
-        Debug.Log("sol");
-        player = GameManager.Instance.GetPlayer1();
+        player1 = GameManager.Instance.GetPlayer1();
+        player2 = GameManager.Instance.GetPlayer2();
         StartCoroutine(EnemyBehaviour());
     }
 
@@ -38,11 +39,13 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
         while (true)
         {
 
-            yield return Move();
+            // yield return Move();
 
             yield return Attack();
 
-            yield return new WaitForSeconds(shotInterval);
+            float randomWaitTime = Random.Range(0.5f, 2.0f);
+
+            yield return new WaitForSeconds(randomWaitTime);
         }
     }
 
@@ -86,12 +89,16 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
     void SpawnGrenade()
     // Esta función se llama en la animación
     {
+        Transform randomPlayer = Random.Range(0, 2) == 0 ? this.player1 : this.player2;
+
+
     
-        if (this.player != null)
+        if (randomPlayer != null)
         {
             Vector3 spawnPosition = transform.position + transform.up * 0.5f;
+
     
-            grenadePrefab.GetComponent<Grenade>().Spawn(spawnPosition, grenadePrefab, this.player.position);
+            grenadePrefab.GetComponent<Grenade>().Spawn(spawnPosition, randomPlayer.position);
         }
 
     }
@@ -100,7 +107,6 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log(health);
         if (health <= 0){
             Destroy(gameObject);
         }
