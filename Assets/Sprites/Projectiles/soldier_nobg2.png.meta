@@ -1,0 +1,4457 @@
+fileFormatVersion: 2
+guid: c73bbfa3d0906544c991fc4694f909b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soldier_nobg2_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 397
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596bb7b6d68294448b8a60b70f15263c
+      internalID: -286452076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 398
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f94b0d3c5b16c49b7e90cd8a388f5e
+      internalID: -331086499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 398
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8ba678ca04bfb418be11ed0e337218
+      internalID: -278400900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 399
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798ec3e1e035840479e60c763445554a
+      internalID: -204246723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 399
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecf4fd0324dac14b89f04fa30a68c32
+      internalID: 1534594427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 399
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2714d5aaf320045b910823076a3d9a
+      internalID: -68106396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_11
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 398
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a524c74464590449e5fd86037892f3
+      internalID: -1627862040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 371
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f05c8f11a6a754e89797b9933e9ab8
+      internalID: -1190789084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 372
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e022819e70cf44941b842b1b00869647
+      internalID: -1961836196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 372
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb46bebd8e605ac4189b68fdb5fc4f80
+      internalID: -746792118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_15
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 373
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc44b81103f5374a80122c6bbe3dfe0
+      internalID: 1216390457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 373
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77315b010a1f0428a7e4013936172a
+      internalID: -1225889411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_17
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 373
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93626e3f732036f4e8138f9259f2cd32
+      internalID: -460863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 372
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c562a9cc6f6bf42b09e41777e8cf0f
+      internalID: 122317269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_19
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 367
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f8fc772b3d91149a986fb8f3c9853b
+      internalID: -129103074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 345
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2edcc6398e2c246976e3b5b627ba78
+      internalID: -341487635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 346
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab92619c0ec21854ca2e7f4a4caaf3f4
+      internalID: 2077171402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_22
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 346
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60829bf1932a146428cb46a1293416f6
+      internalID: 524134247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 347
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e361ff3885aef6a46ab3020070cf0ba8
+      internalID: 11110855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_24
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 347
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1028c561050c35446912608b54d1d211
+      internalID: -728133210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_25
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 347
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c15b405e2fa1b347844172500285716
+      internalID: -2123701743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_26
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 346
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec760a0a76b32534f89f4ca486319938
+      internalID: -1526048574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_27
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 341
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f082712f6400440aca12edbfead13e
+      internalID: -1447874542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 320
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b79e65dbd24f434e95ff772b35f7e51
+      internalID: -1198459893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 320
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ddd9f9262ad6647aa762334985ae2b
+      internalID: -1314511665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_30
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 320
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee04a2d90ec88ce47b06f58184393bd8
+      internalID: 35563261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3573046e38c962c42b23f81e66ed0e64
+      internalID: -267662984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_32
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6603dd2f518fee34e8fdd151df1b06e2
+      internalID: 319058496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_33
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1c8b1e99d8bd04387fb2b78bbbe5fd
+      internalID: -684973544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e260cd187ac09a4eb05fa3fba6b5294
+      internalID: -1235669667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_35
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8454b42c4ed24004b8eb6900f8b66918
+      internalID: 816790884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_36
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a1f171472634245a6cf73572fae82c
+      internalID: -22049795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_37
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a691c332fef324c9a639694206174d
+      internalID: 415786157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_38
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 303
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4612045558f56b4459be07522985a343
+      internalID: -201484486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_39
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 282
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae0caaa285e765489fdda835b45586e
+      internalID: -1564606355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_40
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 282
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b11df7e8b043964e9efe540b9f39e2f
+      internalID: -287101560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_41
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 282
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f4dfea7bc2e064aaed75470044f385
+      internalID: 1257428595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 282
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a43412c668d1b4cbb502d9ae270091
+      internalID: 10866429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_43
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 282
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c901ce852d29f4c876577a41660e50
+      internalID: 103635429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_44
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 282
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9df0594bc9bed4d9cf105310e86f6a
+      internalID: -1091549988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_45
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 282
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4ae63ebbfd8334298fd48e007bd901
+      internalID: 2043977516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_46
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 282
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf032f7f204ff841bc342ebb23f9dec
+      internalID: 1883305491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_47
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 282
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19b477c456cb654cb82f665034ae253
+      internalID: 500984878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_48
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 282
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddb69d9b32f7d5458993a882fe6bb6a
+      internalID: 826395829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_49
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 282
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d535d9dee57fa94b93b966003677604
+      internalID: 25637612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_50
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 282
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bd6becfc209134e9cf301274ab48df
+      internalID: -1085048136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_51
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 278
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f4acb0bdf5e9e4f835a939e9fdda86
+      internalID: 1834905872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_52
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 277
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de01ffebe1a85474199086a9a9ccbd5a
+      internalID: 111363816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_53
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 280
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6e02986304ef64a809dfefb67f5af2
+      internalID: 315735642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_54
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 277
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9657c6386bdf1a4f9f179e88c2ebeff
+      internalID: -416143513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_55
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 281
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3b0c1ef38a8e44eae99a658e9b2a47
+      internalID: -1836795882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_56
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 265
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f78e75789fffbf46a0b0524072dbb99
+      internalID: -1833628142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_57
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 265
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46b1a67ffe69614fa4e3e02e90043f2
+      internalID: 706836054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_58
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 266
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0d11c370c13e148aee4bd0ad53835e
+      internalID: -253352026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_59
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 267
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedad6662c662dd4d9f43139c0f5bf2c
+      internalID: -1493428075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_60
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 267
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1efa455da5c9e048ab30c66db85b690
+      internalID: -1573152734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_61
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 238
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db69e0e7b7b4754d930153fd45f6e32
+      internalID: 1832706789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_62
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 238
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484257f4379b40c4493f31ffdd96418b
+      internalID: 1686302878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_63
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 238
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1817c3d6240d9141973378730aa16c2
+      internalID: 186365731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_64
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 239
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3307aef13b0d9214f87961534a90ec8e
+      internalID: -273983429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_65
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 239
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb0a816c1669694f9ff4e144b0e116f
+      internalID: 2081720638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_66
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 240
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349af11439e40074c8534837ce3fc222
+      internalID: -15402332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_67
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 241
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdd06c33b1895a4898409ad43a6d53a
+      internalID: -1366485961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_68
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 241
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24051e0b7e3fd5041b78673a8d9ba00c
+      internalID: 1309952080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_69
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 241
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fed7f6627cfa58479280a468e779f15
+      internalID: -948138855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_70
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 241
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820518a5da6c40040a05b7f5ba62128e
+      internalID: 1037437286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_71
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 241
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b15b1525268f5540afec63da66ae8ec
+      internalID: 149460052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_72
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 240
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140cbf220196bc54ea495335b4cf7046
+      internalID: 278540000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_73
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 239
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bea1dce80e06546b55a851346c1aa6
+      internalID: -809967346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_74
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 238
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1ae47aa93c1ef40941fe0e74a344bc
+      internalID: 1832141567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_75
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 238
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3cff769fb00194388c3eb54458ae65
+      internalID: 467098277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_76
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 238
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773839cda89542946829b21c18da2d3d
+      internalID: 1732044686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_77
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999ff278b1412a94a9289e2586a06f87
+      internalID: -1134375484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_78
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f42d29cb14822b4d83609f7630fe600
+      internalID: -144668150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_79
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6a272796045b64587c7b77fa908951
+      internalID: 1681032737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_80
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b465010747778904cb5eacfb3af7bc63
+      internalID: -447492924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_81
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 223
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c936a705a57134ba78b6fbafdf5beb
+      internalID: 472567541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_82
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 223
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdba73bc16d28641ab5200e02d4d3f5
+      internalID: -1307602610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_83
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 223
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e776e06bbe16894d9824d364b0580fa
+      internalID: -1935910922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_84
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 223
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b6ec172fa27ce418ffb92b90b5f3a2
+      internalID: -1803380716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_85
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 223
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badc7a154234eb5498bca2785823280c
+      internalID: -1694178741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_86
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 223
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d1c66c040442848bf670ab36870205
+      internalID: -1435759322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_87
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ea6e46cf53dbc4d83fb7fcd5aee281
+      internalID: -491342654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_88
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51efc0d4f9eb5d349b6ccafae7d86366
+      internalID: -1615344835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_89
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fb85a4ca44fd149a5311f9093dce44
+      internalID: 365913755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_90
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e50e777cb7e974991d8e60507566f9
+      internalID: -588670835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_91
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a584a84a2bcb745b63c6833eb3dbf7
+      internalID: -1838225034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_92
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d56a4e41c8a6446aab87e63544c63e
+      internalID: 900605546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_93
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 223
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a69ad70287621e42a8f0e8e05868398
+      internalID: -1429249897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_94
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25fa9069f1b95942af867af7bd84256
+      internalID: 1631881863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_95
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefd410d9081b0e43a77e9e0becd5cff
+      internalID: 1529078555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_96
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8622fddcc5c867d4d8c96f69795571e2
+      internalID: 1228187618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_97
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 223
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beeeb491b7acf0d4987153990d77748a
+      internalID: 1385438585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_98
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 223
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d42e50132d04ae4e810eb6f8580fb53
+      internalID: -1603468697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_99
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 223
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a949e927973b6804a9615bd769ddf588
+      internalID: 1958511911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_100
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 223
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed1ee20d00a0fd4fbfc1f98f4713f49
+      internalID: 2037482749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_101
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3130e8d7f59b66040a7b36c7f616b503
+      internalID: -780581401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_102
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ab79dc23b92ab4b96829daaeaf119f
+      internalID: 1693649877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_103
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f47be24a6c85d946bc961738fa5587c
+      internalID: 870055579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_104
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76852be8e88dffa4991927ff3af0e67e
+      internalID: -899811541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_105
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd270197d9ec1f54cbd2be75b3b0971b
+      internalID: 687230582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_106
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 223
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6890783127cd74c9003be2a4cc4241
+      internalID: 1081030792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_107
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 207
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689c6a2c36b021f42aed4e53d96fa7ef
+      internalID: -1464647694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_108
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa23b54097a2494f825b2c7b7391f4f
+      internalID: 532703408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_109
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 207
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb667fac5d33ea42bf86c4d476340f8
+      internalID: 1400103543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_110
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 207
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d509645a6c104684189b95ded2fa759d
+      internalID: -637965465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_111
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 207
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e544f7407deb7e46a08c76d87f8c838
+      internalID: -1283506018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_112
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 207
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e18434bc622ae44ca8804c0a3e2351c
+      internalID: 363096738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_113
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 207
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a45a08f59b2074ca2962940473eb9e
+      internalID: 158713890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_114
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 207
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbdf10f2c993ff4b8a71b7ff47de378
+      internalID: 2025515458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_115
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6f2478da7ba7c4ea7c9d29e8bc3f38
+      internalID: -1112995978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_116
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 204
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38d79be1d839604aaa20b7266f9b6a8
+      internalID: -1700465205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_117
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 207
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3d5c64cb4a2d34fa94cef7279cb1a1
+      internalID: -281555599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_118
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 211
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70d7f9da96b11044bb0afa3bf4beaf6
+      internalID: -1117588074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_119
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 213
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ecbd1a50c37a94880e526b5be99114
+      internalID: -2119707040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_120
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 213
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3539bd0f49785348b1ca3471579cb22
+      internalID: 913489154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_121
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 188
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ce8c5b116e39b4296eeac0d625116c
+      internalID: -879496473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_122
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 188
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430a95893573ca6428ea05fe0d611d84
+      internalID: -1892913499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_123
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 188
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ac89cbb66fdab45bbd8781cbe3c56c
+      internalID: -307754096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_124
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 188
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c6e2d18c10bee48b011017112e3f29
+      internalID: -1301660913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_126
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 198
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4920b99175864ac439607e39254fc81b
+      internalID: 1337333254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_127
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 201
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b4529cdb65eac4f8606107231616a5
+      internalID: 2111971433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_128
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 188
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52b465c255e91d4a8d76774e6b59807
+      internalID: -1981292270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_129
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 149
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b21dc6c6a745744aaa2a143518843a
+      internalID: 748505450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_130
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 160
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf9bb2887462424288deb940dffcf74
+      internalID: -1887843541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_131
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 163
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cfacc7735cbcb46abc2647a3830848
+      internalID: 1736830949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_132
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 188
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9067651bd5e0e4582243ab3e242a15
+      internalID: 1663336126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_133
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 187
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b05cfc5a1c0af44b511e7f813ffe9a
+      internalID: 197078517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 149
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3d0ea458698694b81100eb0569d516
+      internalID: -1647840300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_135
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 149
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9245d57c319d2c04b96bc70811cd8dfb
+      internalID: -1737608512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_136
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 150
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7347c5b0c24577843a67431d7086dc35
+      internalID: -1628110017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_137
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 149
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9176a7c467ce0498f036287773900d
+      internalID: 1873260564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_138
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 148
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da1bc332a2c38046a653eb1c924a5bb
+      internalID: 1851628429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_139
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 150
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30fe82c3246a3a48a1e55dab24f38de
+      internalID: -1763028738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_140
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 152
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61b2887e1069d64dbedefec45841f62
+      internalID: 213673193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_141
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 151
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f786b09fd11775c4d86b5797ad836616
+      internalID: 2094892165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_142
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 148
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efaced3dd27355f47bd17eea75a523bb
+      internalID: -345849009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_143
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 146
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719bd24df2daa554b9af3467b2ccc3b4
+      internalID: -863961144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_144
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 146
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63684b8737f940940a6e6a1d6110de95
+      internalID: 1713910563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_145
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 147
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9194c70e34df41848bd6f56b9a9747ae
+      internalID: 2135998295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_146
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 149
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465bc5193f9d074478547fda9f5ba828
+      internalID: 1148065909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_147
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 150
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062c28c90a2eb0349bbc0e2da8a4cc3b
+      internalID: -1532629841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_148
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 149
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeab3522a3730bb49a9c2eb9d02fa798
+      internalID: -503724516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_149
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 149
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6210620817a6047b71492526ad20ab
+      internalID: 1143114597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_150
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 149
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99ed1164b64ff64299dae2f89d27306
+      internalID: -503698822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_151
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 149
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11d512f2f75953478209a38251859e5
+      internalID: 75195066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_152
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 149
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d6ccf50af315f4abad9ab92e0b8e38
+      internalID: 1320762511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_153
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 150
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2deb2cece222f7a4d820d71d3b637c99
+      internalID: -166377002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_154
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee5290e26de3f945b0d3dd5188917e7
+      internalID: 495805543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_155
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 152
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9394086b4009744bcb2481f00f274c
+      internalID: -1805821842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_156
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 153
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978a2b0c7e2e6f148be22151b84acbaa
+      internalID: 1412715505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_157
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 154
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a12d16804444e44a61effb2ab5fa74
+      internalID: 676412914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_158
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 155
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b27d30f88c440418f20ae0cd182a12
+      internalID: -1430709164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_159
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 154
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d9e97a09c89a24e8e552126699ac93
+      internalID: -449381017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_160
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 153
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2803c5aaabc4764ebb65dd8e9580a27
+      internalID: -1792781715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_161
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 152
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5f0e9a4d56b734bae10b2c544305dc
+      internalID: 1782326894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_162
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 151
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0121f6e35b9072a4a8356a3ce9700dba
+      internalID: 1374936369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_163
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 150
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48e862679da1c14ca2c236ec2fd0c10
+      internalID: -554258194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_164
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 101
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5885783e348366c4096a494c3a3dcf49
+      internalID: -1375073631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_165
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 130
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e88b09b8274fa341b1a11f8fa2059da
+      internalID: 233493467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_166
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 103
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db159008b87ad9c4280fda19163fb8cd
+      internalID: -1649259095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_167
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 103
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ebfd9fe8134fb4c8247c53a97d3944
+      internalID: 241031713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_168
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 115
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae12bfde6412324fa1ba1ae25306eb2
+      internalID: -996269068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_169
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 101
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7583e2bacc8c9f7499ebe3f37b5e4790
+      internalID: 1190303693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_170
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 101
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42be29244e92cb54590dbd30ee3c8f34
+      internalID: -732962865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_171
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 101
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd65f19c83a9c249b61740da43c46c8
+      internalID: -772171885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_172
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 101
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f7444db94982947923229f34d10797
+      internalID: 1515233327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_173
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 101
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa863e8c212a62248abe4f8db21baa9a
+      internalID: -907114694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_174
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 101
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dc0d785cfe7684992fbb34d74be3b2
+      internalID: -1850657034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_175
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 101
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaae4655bf98b240b851685859e4caa
+      internalID: 32889039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_176
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 101
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168c04c82d50efc4d9c528353cbe1752
+      internalID: 2034575125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_177
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 101
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb67f270557661a41aa744f60ff08aef
+      internalID: 108344627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_178
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 111
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e61d9587969a2468d1c260c11025b1
+      internalID: 299004820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_179
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 101
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feec8c026fdd416448ac9ff9f8d13aee
+      internalID: 1423832158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_180
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 101
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dcbb118399b3449bc9c50b1cae1cf1
+      internalID: -904197129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_181
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 101
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f713e655eb2ba5644b8465b8cc67c376
+      internalID: -62827915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_182
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 101
+        width: 40
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294a86a4d391fde4cb4695f915a6425e
+      internalID: -2136422982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_183
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 101
+        width: 40
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74db5f7d5c61c5240a814a1830481e5f
+      internalID: 1906747821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_184
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 47
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86401102bc2dde4fb5b2257726f3784
+      internalID: -2099352889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_185
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 47
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f431ec558da29e24b8b4ba4b169d4d26
+      internalID: -1866630683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_186
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 59
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20183fbf53422048adfb0a18b6ffef8
+      internalID: 1533546752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_187
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 47
+        width: 57
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6222ce2da23fcdc4492daf588fd22b79
+      internalID: 1412145432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_188
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 47
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5914f268402414544997487a9e001576
+      internalID: -474660312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_189
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 47
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe71bda883b8964393c2a515573a2e2
+      internalID: 2019669347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_190
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 47
+        width: 61
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead26e9bedcdda14d87bd90adbcb6b92
+      internalID: -679971684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_191
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 47
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8ca48604d320d4aaae66798075626f
+      internalID: 1276006601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_192
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 47
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fa910a0b201754da0675cab4a75fbf
+      internalID: 1198479096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_193
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 47
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58da2446beacd3e42a9cfd5981d3919b
+      internalID: -489502696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_194
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f815b6a42c1d6f4baa5c88a2f5398ec
+      internalID: 326919102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_195
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 5
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72de339f887b2042adfde0617769fc9
+      internalID: -825213574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_196
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 5
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7bd3e5a4b2cce4c97eb5c564842735
+      internalID: 1344932445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_197
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 5
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e77662a532a3164fa843ade50c45a1c
+      internalID: 214807071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_198
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 5
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5ceb0cc71950d48b44faab84b10f26
+      internalID: 881751903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_199
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 5
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f617a2f33f6e03148804e0aba6ba4b67
+      internalID: 1089736018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_200
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 5
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e6f534c07cd9f49afdd82ee0c425ab
+      internalID: -1510407099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_nobg2_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 186
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.52766705, y: 0.44792533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defd1062ffc5ae945a25440223dceee8
+      internalID: -1304760787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      soldier_nobg2_0: -1304760787
+      soldier_nobg2_1: -2070953787
+      soldier_nobg2_10: -68106396
+      soldier_nobg2_100: 2037482749
+      soldier_nobg2_101: -780581401
+      soldier_nobg2_102: 1693649877
+      soldier_nobg2_103: 870055579
+      soldier_nobg2_104: -899811541
+      soldier_nobg2_105: 687230582
+      soldier_nobg2_106: 1081030792
+      soldier_nobg2_107: -1464647694
+      soldier_nobg2_108: 532703408
+      soldier_nobg2_109: 1400103543
+      soldier_nobg2_11: -1627862040
+      soldier_nobg2_110: -637965465
+      soldier_nobg2_111: -1283506018
+      soldier_nobg2_112: 363096738
+      soldier_nobg2_113: 158713890
+      soldier_nobg2_114: 2025515458
+      soldier_nobg2_115: -1112995978
+      soldier_nobg2_116: -1700465205
+      soldier_nobg2_117: -281555599
+      soldier_nobg2_118: -1117588074
+      soldier_nobg2_119: -2119707040
+      soldier_nobg2_12: -1190789084
+      soldier_nobg2_120: 913489154
+      soldier_nobg2_121: -879496473
+      soldier_nobg2_122: -1892913499
+      soldier_nobg2_123: -307754096
+      soldier_nobg2_124: -1301660913
+      soldier_nobg2_125: 946418385
+      soldier_nobg2_126: 1337333254
+      soldier_nobg2_127: 2111971433
+      soldier_nobg2_128: -1981292270
+      soldier_nobg2_129: 748505450
+      soldier_nobg2_13: -1961836196
+      soldier_nobg2_130: -1887843541
+      soldier_nobg2_131: 1736830949
+      soldier_nobg2_132: 1663336126
+      soldier_nobg2_133: 197078517
+      soldier_nobg2_134: -1647840300
+      soldier_nobg2_135: -1737608512
+      soldier_nobg2_136: -1628110017
+      soldier_nobg2_137: 1873260564
+      soldier_nobg2_138: 1851628429
+      soldier_nobg2_139: -1763028738
+      soldier_nobg2_14: -746792118
+      soldier_nobg2_140: 213673193
+      soldier_nobg2_141: 2094892165
+      soldier_nobg2_142: -345849009
+      soldier_nobg2_143: -863961144
+      soldier_nobg2_144: 1713910563
+      soldier_nobg2_145: 2135998295
+      soldier_nobg2_146: 1148065909
+      soldier_nobg2_147: -1532629841
+      soldier_nobg2_148: -503724516
+      soldier_nobg2_149: 1143114597
+      soldier_nobg2_15: 1216390457
+      soldier_nobg2_150: -503698822
+      soldier_nobg2_151: 75195066
+      soldier_nobg2_152: 1320762511
+      soldier_nobg2_153: -166377002
+      soldier_nobg2_154: 495805543
+      soldier_nobg2_155: -1805821842
+      soldier_nobg2_156: 1412715505
+      soldier_nobg2_157: 676412914
+      soldier_nobg2_158: -1430709164
+      soldier_nobg2_159: -449381017
+      soldier_nobg2_16: -1225889411
+      soldier_nobg2_160: -1792781715
+      soldier_nobg2_161: 1782326894
+      soldier_nobg2_162: 1374936369
+      soldier_nobg2_163: -554258194
+      soldier_nobg2_164: -1375073631
+      soldier_nobg2_165: 233493467
+      soldier_nobg2_166: -1649259095
+      soldier_nobg2_167: 241031713
+      soldier_nobg2_168: -996269068
+      soldier_nobg2_169: 1190303693
+      soldier_nobg2_17: -460863
+      soldier_nobg2_170: -732962865
+      soldier_nobg2_171: -772171885
+      soldier_nobg2_172: 1515233327
+      soldier_nobg2_173: -907114694
+      soldier_nobg2_174: -1850657034
+      soldier_nobg2_175: 32889039
+      soldier_nobg2_176: 2034575125
+      soldier_nobg2_177: 108344627
+      soldier_nobg2_178: 299004820
+      soldier_nobg2_179: 1423832158
+      soldier_nobg2_18: 122317269
+      soldier_nobg2_180: -904197129
+      soldier_nobg2_181: -62827915
+      soldier_nobg2_182: -2136422982
+      soldier_nobg2_183: 1906747821
+      soldier_nobg2_184: -2099352889
+      soldier_nobg2_185: -1866630683
+      soldier_nobg2_186: 1533546752
+      soldier_nobg2_187: 1412145432
+      soldier_nobg2_188: -474660312
+      soldier_nobg2_189: 2019669347
+      soldier_nobg2_19: -129103074
+      soldier_nobg2_190: -679971684
+      soldier_nobg2_191: 1276006601
+      soldier_nobg2_192: 1198479096
+      soldier_nobg2_193: -489502696
+      soldier_nobg2_194: 326919102
+      soldier_nobg2_195: -825213574
+      soldier_nobg2_196: 1344932445
+      soldier_nobg2_197: 214807071
+      soldier_nobg2_198: 881751903
+      soldier_nobg2_199: 1089736018
+      soldier_nobg2_2: -1228690593
+      soldier_nobg2_20: -341487635
+      soldier_nobg2_200: -1510407099
+      soldier_nobg2_21: 2077171402
+      soldier_nobg2_22: 524134247
+      soldier_nobg2_23: 11110855
+      soldier_nobg2_24: -728133210
+      soldier_nobg2_25: -2123701743
+      soldier_nobg2_26: -1526048574
+      soldier_nobg2_27: -1447874542
+      soldier_nobg2_28: -1198459893
+      soldier_nobg2_29: -1314511665
+      soldier_nobg2_3: -1627320456
+      soldier_nobg2_30: 35563261
+      soldier_nobg2_31: -267662984
+      soldier_nobg2_32: 319058496
+      soldier_nobg2_33: -684973544
+      soldier_nobg2_34: -1235669667
+      soldier_nobg2_35: 816790884
+      soldier_nobg2_36: -22049795
+      soldier_nobg2_37: 415786157
+      soldier_nobg2_38: -201484486
+      soldier_nobg2_39: -1564606355
+      soldier_nobg2_4: 1550593047
+      soldier_nobg2_40: -287101560
+      soldier_nobg2_41: 1257428595
+      soldier_nobg2_42: 10866429
+      soldier_nobg2_43: 103635429
+      soldier_nobg2_44: -1091549988
+      soldier_nobg2_45: 2043977516
+      soldier_nobg2_46: 1883305491
+      soldier_nobg2_47: 500984878
+      soldier_nobg2_48: 826395829
+      soldier_nobg2_49: 25637612
+      soldier_nobg2_5: -286452076
+      soldier_nobg2_50: -1085048136
+      soldier_nobg2_51: 1834905872
+      soldier_nobg2_52: 111363816
+      soldier_nobg2_53: 315735642
+      soldier_nobg2_54: -416143513
+      soldier_nobg2_55: -1836795882
+      soldier_nobg2_56: -1833628142
+      soldier_nobg2_57: 706836054
+      soldier_nobg2_58: -253352026
+      soldier_nobg2_59: -1493428075
+      soldier_nobg2_6: -331086499
+      soldier_nobg2_60: -1573152734
+      soldier_nobg2_61: 1832706789
+      soldier_nobg2_62: 1686302878
+      soldier_nobg2_63: 186365731
+      soldier_nobg2_64: -273983429
+      soldier_nobg2_65: 2081720638
+      soldier_nobg2_66: -15402332
+      soldier_nobg2_67: -1366485961
+      soldier_nobg2_68: 1309952080
+      soldier_nobg2_69: -948138855
+      soldier_nobg2_7: -278400900
+      soldier_nobg2_70: 1037437286
+      soldier_nobg2_71: 149460052
+      soldier_nobg2_72: 278540000
+      soldier_nobg2_73: -809967346
+      soldier_nobg2_74: 1832141567
+      soldier_nobg2_75: 467098277
+      soldier_nobg2_76: 1732044686
+      soldier_nobg2_77: -1134375484
+      soldier_nobg2_78: -144668150
+      soldier_nobg2_79: 1681032737
+      soldier_nobg2_8: -204246723
+      soldier_nobg2_80: -447492924
+      soldier_nobg2_81: 472567541
+      soldier_nobg2_82: -1307602610
+      soldier_nobg2_83: -1935910922
+      soldier_nobg2_84: -1803380716
+      soldier_nobg2_85: -1694178741
+      soldier_nobg2_86: -1435759322
+      soldier_nobg2_87: -491342654
+      soldier_nobg2_88: -1615344835
+      soldier_nobg2_89: 365913755
+      soldier_nobg2_9: 1534594427
+      soldier_nobg2_90: -588670835
+      soldier_nobg2_91: -1838225034
+      soldier_nobg2_92: 900605546
+      soldier_nobg2_93: -1429249897
+      soldier_nobg2_94: 1631881863
+      soldier_nobg2_95: 1529078555
+      soldier_nobg2_96: 1228187618
+      soldier_nobg2_97: 1385438585
+      soldier_nobg2_98: -1603468697
+      soldier_nobg2_99: 1958511911
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

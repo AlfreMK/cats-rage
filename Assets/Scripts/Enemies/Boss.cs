@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class Boss : MonoBehaviour
+public class Boss : MonoBehaviour, CanTakeDamage
 {
     public Transform firePoint;
     public GameObject bulletPrefab;

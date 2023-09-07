@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
@@ -15,10 +15,10 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        CanTakeDamage damageable = hitInfo.GetComponent<CanTakeDamage>();
+        Player player = hitInfo.GetComponent<Player>();
         
-        if (damageable != null) {
-            damageable.TakeDamage(damageBullet);
+        if (player != null) {
+            player.TakeDamage(damageBullet);
         }
         Destroy(gameObject);    // Destroy the bullet
     }

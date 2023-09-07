@@ -49,11 +49,14 @@ public class Weapon : MonoBehaviour
     }
 
     void Meele() {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
-        if (hit.collider != null) {
-            if (hit.collider.gameObject.GetComponent<Player>() != null) {
-                hit.collider.gameObject.GetComponent<Player>().TakeDamage(40);
+        float meleeRadius = 0.5f;
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(firePoint.position, meleeRadius);
+        for(var hit_index = 0; hit_index < hitColliders.Length; hit_index++)
+        {
+            if (hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>() != null) {
+                hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>().TakeDamage(40);
             }
+
         }
     }
 
