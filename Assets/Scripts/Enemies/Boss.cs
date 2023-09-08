@@ -8,7 +8,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
     public Transform firePoint;
     public GameObject bulletPrefab;
     public Animator animator;
-    [SerializeField] private int lifeBoss = 1000;
+    [SerializeField] public int lifeBoss = 1000;
     [SerializeField] private int attackSpeed = 300;
     private int coolDown = 0;
     private bool isGoingUp = true;
