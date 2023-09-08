@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         if ((player1 != null && player2 != null) &&
             (player1.health <= 0 || player2.health <= 0)){
 
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("MainScene 1");
 
 //            SceneManager.LoadScene("Lose");
         }

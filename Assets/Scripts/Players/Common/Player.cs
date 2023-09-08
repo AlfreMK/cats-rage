@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -76,6 +77,11 @@ public class Player : MonoBehaviour
         animator.SetBool("isPunching", Input.GetAxisRaw(punchKey) != 0);
         rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, LimitsY.x, LimitsY.y));
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(5);
+        }
         
     }
 

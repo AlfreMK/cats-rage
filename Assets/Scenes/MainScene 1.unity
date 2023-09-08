@@ -990,6 +990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1100370251934644795, guid: cead3c9598f0a024f946be9047133e11, type: 3}
   player2: {fileID: 2650494184269056422, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
+  boss: {fileID: 0}
 --- !u!1 &1302096153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,7 +1745,7 @@ Transform:
   m_GameObject: {fileID: 1759871847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.42, y: -0.06, z: 0}
+  m_LocalPosition: {x: 10.38, y: -0.1, z: 0}
   m_LocalScale: {x: 1.9025512, y: 9.936845, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
