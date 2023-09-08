@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Player player1;
     public Player player2;
+    public Boss boss;
     void Start()
     {
         Instance = this;
-
     }
 
     // Update is called once per frame
@@ -20,9 +20,12 @@ public class GameManager : MonoBehaviour
     {
         if ((player1 != null && player2 != null) &&
             (player1.health <= 0 || player2.health <= 0)){
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("Lose");
         }
-
+        if (boss != null && boss.lifeBoss <= 0)
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
     public Transform GetPlayer1()

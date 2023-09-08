@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1364127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9080681903841572888, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+  m_PrefabInstance: {fileID: 6879963624834448286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7a6efeb893727499a28a90ee9bf310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1439645
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +707,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -987,6 +1002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15bde0101f98334c8c7232fdbde9278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 116775814}
+  player2: {fileID: 1748922491}
+  boss: {fileID: 1364127}
 --- !u!1 &1302096153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1281,10 @@ PrefabInstance:
     - target: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1837,6 +1859,10 @@ PrefabInstance:
     - target: {fileID: 7618822463058344901, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618822463058344901, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
       objectReference: {fileID: 0}
     - target: {fileID: 9149623580865116961, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_LocalPosition.x
