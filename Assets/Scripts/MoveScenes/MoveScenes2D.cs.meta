@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: a2bd02d246d335b47b359a8f04aa0182
+guid: 465d9108c7392a14bb38342b007a298f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - startingPosition: {fileID: 11400000, guid: 0788f4417025b6c46bf124494558e937, type: 2}
-  - animator: {instanceID: 0}
-  executionOrder: 150
+  - playerStorage: {fileID: 11400000, guid: 0788f4417025b6c46bf124494558e937, type: 2}
+  executionOrder: 0
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

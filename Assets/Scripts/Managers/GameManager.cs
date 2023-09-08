@@ -20,11 +20,15 @@ public class GameManager : MonoBehaviour
     {
         if ((player1 != null && player2 != null) &&
             (player1.health <= 0 || player2.health <= 0)){
-            SceneManager.LoadScene("Lose");
+
+            SceneManager.LoadScene("Level1");
+
+//            SceneManager.LoadScene("Lose");
         }
-        if (boss != null && boss.lifeBoss <= 0)
-        {
-            SceneManager.LoadScene("Win");
+//        if (boss != null && boss.lifeBoss <= 0)
+//        {
+//            SceneManager.LoadScene("Win");
+
         }
     }
 

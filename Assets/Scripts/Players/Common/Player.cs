@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,13 +25,21 @@ public class Player : MonoBehaviour
     private string verticalKey;
     private string shootKey;
     private string punchKey;
+    public static Player Instance;
 
+    public VectorValue startingPosition;
+    Vector2 vector_position;
+
+    
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     public Animator animator;
     void Awake()
     {
+
+        //GameObject.DontDestroyOnLoad(this.gameObject);
+
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -68,6 +77,12 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, LimitsY.x, LimitsY.y));
         
+    }
+
+    public void teleport()
+    {
+        vector_position = new Vector2(-10, 0);
+        transform.position = vector_position;
     }
 
     public void TakeDamage(int damage)
