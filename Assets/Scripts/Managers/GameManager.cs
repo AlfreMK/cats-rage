@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 //        {
 //            SceneManager.LoadScene("Win");
 
-        }
+        // }
     }
 
     public Transform GetPlayer1()
