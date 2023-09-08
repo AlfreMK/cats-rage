@@ -17,10 +17,12 @@ public class MoveScenes2D : MonoBehaviour
     {
         if (other.CompareTag("Player1"))
         {
-            Debug.Log("Hola");
-            //playerStorage.initialValue = playerPosition;
-            player.teleport();
-            SceneManager.LoadScene(newLevel);
+            if (GameObject.FindGameObjectsWithTag("Enemies").Length == 0)
+            {
+                //playerStorage.initialValue = playerPosition;
+                player.teleport();
+                SceneManager.LoadScene(newLevel);
+            }
         }
     }
 }
