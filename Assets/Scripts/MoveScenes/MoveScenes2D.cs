@@ -17,7 +17,7 @@ public class MoveScenes2D : MonoBehaviour
     {
         if (other.CompareTag("Player1"))
         {
-            Debug.Log("Hola");
+            // Debug.Log("Hola");
             //playerStorage.initialValue = playerPosition;
             player.teleport();
             SceneManager.LoadScene(newLevel);

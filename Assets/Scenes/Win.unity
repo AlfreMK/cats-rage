@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &5010652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6835545255097597625, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
+  m_PrefabInstance: {fileID: 8162295481541325550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b842a1f4ac0e500a8cb646f25543b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1508726443
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,18 +333,22 @@ PrefabInstance:
     - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8162295481541325551}
+      objectReference: {fileID: 5010652}
     - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayAgain, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3905887549252040398, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -451,17 +466,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6835545255097597625, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
---- !u!1 &8162295481541325551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2485328998931715282, guid: 9572c0f9c299792e7919ccd3589858c2, type: 3}
-  m_PrefabInstance: {fileID: 8162295481541325550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class WinScreen : MonoBehaviour
         {
             if (GameObject.FindGameObjectsWithTag("Enemies").Length == 0)
             {
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene("Win");
             }
         }
     }
