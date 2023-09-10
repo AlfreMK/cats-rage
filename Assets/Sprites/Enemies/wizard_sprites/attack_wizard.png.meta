@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: 82e00456f646bda4b9090e63b0784754
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: attack_wizard_0
+      rect:
+        serializedVersion: 2
+        x: 8034
+        y: 237
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd9ecec1efde4f4fa0232a0e77a49a5
+      internalID: 1169192200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 9
+        width: 120
+        height: 216
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be49e3e20ac675a4eaf279076b404b60
+      internalID: -974081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_2
+      rect:
+        serializedVersion: 2
+        x: 7062
+        y: 195
+        width: 30
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e9d79d8dd81d34c86da8e20425a11f
+      internalID: 427605764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_3
+      rect:
+        serializedVersion: 2
+        x: 8004
+        y: 183
+        width: 72
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f533b9517b51344bb88bc9a7fc51ff
+      internalID: 936515154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_4
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 9
+        width: 139
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0530c23c9b8632a4eacdf740b85c2ff3
+      internalID: 425153396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_5
+      rect:
+        serializedVersion: 2
+        x: 5297
+        y: 8
+        width: 183
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42d1b632920b7b489206c0bd8f7f48a
+      internalID: 315395232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_18
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 9
+        width: 162
+        height: 114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dbfdd79cacd3943aff1272439266c1
+      internalID: 2001706199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_22
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 9
+        width: 84
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7113ceb96edf4124ab7f0fe17b541eba
+      internalID: 1223534464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_23
+      rect:
+        serializedVersion: 2
+        x: 5142
+        y: 9
+        width: 90
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e87c7b2300d9a8438dfda4ee7a7f525
+      internalID: -567881631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_25
+      rect:
+        serializedVersion: 2
+        x: 6096
+        y: 9
+        width: 90
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a0895e9a94f5e4e8379cf5eb27fb1b
+      internalID: 856201915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_26
+      rect:
+        serializedVersion: 2
+        x: 7062
+        y: 9
+        width: 78
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf9909261241a04f86d569d250d7572
+      internalID: 280010560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_27
+      rect:
+        serializedVersion: 2
+        x: 8022
+        y: 9
+        width: 90
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befb02d5296c860428c98ccb321e5fba
+      internalID: -1363258948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_28
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 9
+        width: 146
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306d6d52fd8cdfe4c8faa85a547895c8
+      internalID: -164643903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_29
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 9
+        width: 152
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b036ddc06d735cd408a0f7ce4f9b161b
+      internalID: -218933963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_31
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 9
+        width: 138
+        height: 180
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7ff35ceda400a4d9a7534b29dd1e2d
+      internalID: -1292103828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_39
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 69
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbfc0024d778f647a6b6b4548867cee
+      internalID: 1603159657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_wizard_43
+      rect:
+        serializedVersion: 2
+        x: 4338
+        y: 9
+        width: 171
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f1c8a75c46fb247a8f1b4d8388dc2f
+      internalID: -2003581778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      attack_wizard_0: 1169192200
+      attack_wizard_1: -974081
+      attack_wizard_10: 1299449186
+      attack_wizard_11: 278742461
+      attack_wizard_12: -643743371
+      attack_wizard_13: 1270089854
+      attack_wizard_14: 835504312
+      attack_wizard_15: 2972807
+      attack_wizard_16: -973985909
+      attack_wizard_17: -687543085
+      attack_wizard_18: 2001706199
+      attack_wizard_19: -1088280008
+      attack_wizard_2: 427605764
+      attack_wizard_20: -730591809
+      attack_wizard_21: -609093314
+      attack_wizard_22: 1223534464
+      attack_wizard_23: -567881631
+      attack_wizard_24: 1611621400
+      attack_wizard_25: 856201915
+      attack_wizard_26: 280010560
+      attack_wizard_27: -1363258948
+      attack_wizard_28: -164643903
+      attack_wizard_29: -218933963
+      attack_wizard_3: 936515154
+      attack_wizard_30: 138824833
+      attack_wizard_31: -1292103828
+      attack_wizard_32: 1773474722
+      attack_wizard_33: -1729068036
+      attack_wizard_34: -2002918055
+      attack_wizard_35: -1415603889
+      attack_wizard_36: -2035581731
+      attack_wizard_37: -1558060558
+      attack_wizard_38: 1884613422
+      attack_wizard_39: 1603159657
+      attack_wizard_4: 425153396
+      attack_wizard_40: -802735282
+      attack_wizard_41: -115483898
+      attack_wizard_42: -1019220973
+      attack_wizard_43: -2003581778
+      attack_wizard_44: 296469937
+      attack_wizard_45: -1895782855
+      attack_wizard_46: 24609390
+      attack_wizard_47: 1661330587
+      attack_wizard_48: 761426323
+      attack_wizard_49: -67058800
+      attack_wizard_5: 315395232
+      attack_wizard_50: 1163980373
+      attack_wizard_51: 1195519961
+      attack_wizard_52: 855767035
+      attack_wizard_53: -990280045
+      attack_wizard_6: 91497190
+      attack_wizard_7: -1758396278
+      attack_wizard_8: -515025015
+      attack_wizard_9: -1054580214
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
