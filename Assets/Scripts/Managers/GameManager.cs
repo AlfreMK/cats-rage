@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Player player1;
     public Player player2;
-    public Boss boss;
+    public Boss boss = null;
     void Start()
     {
         Instance = this;
@@ -21,9 +21,8 @@ public class GameManager : MonoBehaviour
         if ((player1 != null && player2 != null) &&
             (player1.health <= 0 || player2.health <= 0)){
 
-            SceneManager.LoadScene("MainScene 1");
+            SceneManager.LoadScene("Lose");
 
-//            SceneManager.LoadScene("Lose");
         }
 //        if (boss != null && boss.lifeBoss <= 0)
 //        {
