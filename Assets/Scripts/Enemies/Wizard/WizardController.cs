@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Archer : MonoBehaviour, CanTakeDamage
+public class WizardController : MonoBehaviour
 {
     public GameObject arrowPrefab;
     public Transform firePoint;
@@ -15,7 +15,7 @@ public class Archer : MonoBehaviour, CanTakeDamage
     private Rigidbody2D rb;
 
     [SerializeField] public int health = 100;
-    private static readonly int _animationIdle = Animator.StringToHash("idle");
+    private static readonly int _animationIdle = Animator.StringToHash("Idle");
     private static readonly int _animationAttack = Animator.StringToHash("Attack");
     private static readonly int _animationRun = Animator.StringToHash("Run");
 

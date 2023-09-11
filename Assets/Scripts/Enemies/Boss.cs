@@ -7,70 +7,71 @@ public class Boss : MonoBehaviour, CanTakeDamage
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public Animator animator;
     [SerializeField] public int lifeBoss = 1000;
-    [SerializeField] private int attackSpeed = 300;
-    private int coolDown = 0;
-    private bool isGoingUp = true;
-    private bool isDefeated = false;
+    private Animator animator;
+    private Rigidbody2D rb;
+    // private bool isMovingUp = true;
+    private static readonly int _animationIdle = Animator.StringToHash("Idle");
+    private static readonly int _animationAttack = Animator.StringToHash("Attack");
+    private static readonly int _animationDefeat = Animator.StringToHash("Defeat");
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator EnemyBehaviour()
     {
-        // limits -4.85f, -1.75f
-        // move up and down
+        while (true)
+        {
+            // yield return Move();
+            yield return Attack();
 
-        if (lifeBoss <= 0 && !isDefeated) {
-            animator.SetTrigger("Defeat");
-            isDefeated = true;
-            Destroy(gameObject, 2.3f);
-        }
-        if (!isDefeated) {
-            CoolDownFunction(Shoot);
-            if (isGoingUp) {
-            transform.Translate(Vector2.up * Time.deltaTime * 0.5f);
-            if (transform.position.y >= -1.75f) {
-                isGoingUp = false;
-            }
-            } else {
-                transform.Translate(Vector2.down * Time.deltaTime * 0.5f);
-                if (transform.position.y <= -4.85f) {
-                    isGoingUp = true;
-                }
-            }
-        }
-        
+            yield return new WaitForSeconds(2.0f);
 
+        }
     }
 
-    void Shoot() {
-        // Debug.Log("Shooting");
-        animator.SetTrigger("Attack");
+    void toogleBool(bool b){
+        b = !b;
+    }
+
+    // IEnumerator Move(){
+        // TODO: Move the boss
+    // }
+
+
+    IEnumerator Attack(){
+        SetAnimationState(_animationAttack);
+        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.4f);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        SetAnimationState(_animationIdle);
     }
 
-    void CoolDownFunction(System.Action function) {
-        if (coolDown < 0) {
-            coolDown = attackSpeed;
-            function();
-        }
-        coolDown--;
-    }
 
-    void wait(int frames) {
-        int i = 0;
-        while (i < frames) {
-            i++;
-        }
-    }
 
     public void TakeDamage(int damage) {
         lifeBoss -= damage;
+        if (lifeBoss <= 0) {
+            SetAnimationState(_animationDefeat);
+            Destroy(gameObject, 2.3f);
+        }
+    }
+
+    void SetAnimationState(int state)
+    {
+        animator.CrossFade(state, 0, 0);
+    }
+
+    void OnBecameInvisible()
+    {
+        StopAllCoroutines();
+    }
+
+    void OnBecameVisible()
+    {
+        StartCoroutine(EnemyBehaviour());
     }
 }

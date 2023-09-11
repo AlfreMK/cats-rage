@@ -10,10 +10,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
 {
-    // -4.85 -1.75
-
-    static Vector2 LimitsY = new Vector2(-4.85f, -1.75f);
-
     // Start is called before the first frame update
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int health = 100;
@@ -28,7 +24,6 @@ public class Player : MonoBehaviour
     private string punchKey;
     public static Player Instance;
 
-    public VectorValue startingPosition;
     Vector2 vector_position;
 
     
@@ -75,9 +70,7 @@ public class Player : MonoBehaviour
         animator.SetBool("isWalking", control.magnitude != 0);
         animator.SetBool("isShooting", Input.GetButtonDown(shootKey));
         animator.SetBool("isPunching", Input.GetAxisRaw(punchKey) != 0);
-        rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);
-        transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, LimitsY.x, LimitsY.y));
-        
+        rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);        
     }
 
     public void teleport()

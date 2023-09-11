@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GameManager Instance;
-    public Player player1;
-    public Player player2;
-    public Boss boss = null;
+    [SerializeField] public Player player1;
+    [SerializeField] public Player player2;
+
+
     void Start()
     {
         Instance = this;
@@ -20,15 +21,8 @@ public class GameManager : MonoBehaviour
     {
         if ((player1 != null && player2 != null) &&
             (player1.health <= 0 || player2.health <= 0)){
-
             SceneManager.LoadScene("Lose");
-
         }
-//        if (boss != null && boss.lifeBoss <= 0)
-//        {
-//            SceneManager.LoadScene("Win");
-
-        // }
     }
 
     public Transform GetPlayer1()
@@ -39,5 +33,15 @@ public class GameManager : MonoBehaviour
     public Transform GetPlayer2()
     {
         return player2.transform;
+    }
+
+    public Vector2 GetAveragePlayerPosition()
+    {
+        return (player1.transform.position + player2.transform.position) / 2;
+    }
+
+    public void Hello()
+    {
+        Debug.Log("Hello");
     }
 }
