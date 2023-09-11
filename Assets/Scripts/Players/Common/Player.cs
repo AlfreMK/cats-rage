@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     private string punchKey;
     public static Player Instance;
 
-    public VectorValue startingPosition;
     Vector2 vector_position;
 
     
