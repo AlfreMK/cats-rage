@@ -25,7 +25,6 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
         animator = GetComponent<Animator>();
         player1 = GameManager.Instance.GetPlayer1();
         player2 = GameManager.Instance.GetPlayer2();
-        StartCoroutine(EnemyBehaviour());
     }
 
 
@@ -110,5 +109,16 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
         if (health <= 0){
             Destroy(gameObject);
         }
+    }
+
+
+    void OnBecameInvisible()
+    {
+        StopAllCoroutines();
+    }
+
+    void OnBecameVisible()
+    {
+        StartCoroutine(EnemyBehaviour());
     }
 }

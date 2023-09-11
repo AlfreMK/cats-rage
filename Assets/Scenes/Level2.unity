@@ -321,7 +321,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -54597753
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 227
   m_Sprite: {fileID: 249728345, guid: c9f8d4ad646656c4cb959ebd8658213b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -478,7 +478,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 341
       objectReference: {fileID: 0}
     - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_SortingLayerID
@@ -486,11 +490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.88
+      value: 7.51
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.72
+      value: -3.41
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -679,7 +683,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 116775814}
   player2: {fileID: 1748922491}
-  boss: {fileID: 6879963624834448287}
 --- !u!1 &954179133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1039,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 164
       objectReference: {fileID: 0}
     - target: {fileID: 2367803968240166719, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_SortingLayerID
@@ -1044,11 +1051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.15
+      value: 8.08
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.62
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 2379291203708075659, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1388,7 +1395,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -54597753
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 411
   m_Sprite: {fileID: 1664888596, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1563,13 +1570,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3452623398531781087, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 04236de5a288a994b83919b9d6c5ef4c, type: 2}
     - target: {fileID: 3818159122731467767, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3818159122731467767, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+      propertyPath: m_SortingOrder
+      value: 327
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818159122731467767, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_SortingLayerID
-      value: 940652753
+      value: -1077115391
       objectReference: {fileID: 0}
     - target: {fileID: 7618822463058344901, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_Name
@@ -1628,17 +1643,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07f386fd08caa64081b931df1711e65, type: 3}
---- !u!114 &6879963624834448287 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9080681903841572888, guid: e07f386fd08caa64081b931df1711e65, type: 3}
-  m_PrefabInstance: {fileID: 6879963624834448286}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd7a6efeb893727499a28a90ee9bf310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
