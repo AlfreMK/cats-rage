@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static GameManager Instance;
     [SerializeField] public Player player1;
     [SerializeField] public Player player2;
 
 
+    // Start is called before the first frame update
     void Start()
     {
         Instance = this;
@@ -33,6 +33,16 @@ public class GameManager : MonoBehaviour
     public Transform GetPlayer2()
     {
         return player2.transform;
+    }
+
+    public Player GetPlayer1Script()
+    {
+        return player1;
+    }
+
+    public Player GetPlayer2Script()
+    {
+        return player2;
     }
 
     public Vector2 GetAveragePlayerPosition()

@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 339584250733596314}
   m_Layer: 3
   m_Name: miku
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +201,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -54597753
   m_SortingLayer: 4
-  m_SortingOrder: 265
+  m_SortingOrder: 386
   m_Sprite: {fileID: 1664888596, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -323,7 +323,6 @@ MonoBehaviour:
   verticalSpeed: 1.5
   horizontalSpeed: 3
   playerNumber: 2
-  startingPosition: {fileID: 0}
   animator: {fileID: 0}
 --- !u!114 &6836593009875359530
 MonoBehaviour:
