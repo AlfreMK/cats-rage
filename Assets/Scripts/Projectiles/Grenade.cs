@@ -43,6 +43,10 @@ public class Grenade : MonoBehaviour
             if (hitColliders[hit_index].gameObject.GetComponent<Player>() != null) {
                 hitColliders[hit_index].gameObject.GetComponent<Player>().TakeDamage(40);
             }
+            else if (hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>() != null)
+            {
+                hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>().TakeDamage(100);
+            }
         }
         Destroy(grenadeTransform.gameObject); 
     }

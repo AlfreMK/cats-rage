@@ -9,6 +9,7 @@ public class PlayAgain : MonoBehaviour
     public void Play()
     {
     	SceneManager.LoadScene("Menu");
+        GlobalVariables.Instance.ResetScore();
     }
 
     // Update is called once per frame

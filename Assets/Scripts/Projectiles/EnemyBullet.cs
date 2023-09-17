@@ -19,6 +19,7 @@ public class EnemyBullet : MonoBehaviour
         
         if (player != null) {
             player.TakeDamage(damageBullet);
+            GlobalVariables.Instance.AddScore(-damageBullet);
         }
         Destroy(gameObject);    // Destroy the bullet
     }
