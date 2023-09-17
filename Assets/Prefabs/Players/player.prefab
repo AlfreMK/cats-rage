@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 3009452658112915294}
   m_Layer: 3
   m_Name: player
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -54597753
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 227
   m_Sprite: {fileID: 249728345, guid: c9f8d4ad646656c4cb959ebd8658213b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -232,7 +232,6 @@ MonoBehaviour:
   verticalSpeed: 1.5
   horizontalSpeed: 3
   playerNumber: 1
-  startingPosition: {fileID: 11400000, guid: 0788f4417025b6c46bf124494558e937, type: 2}
   animator: {fileID: 0}
 --- !u!114 &3472015020710463041
 MonoBehaviour:
@@ -248,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4265430525443820633}
   bulletPrefab: {fileID: 8846705260052899089, guid: 70019723d11b1de43a1209a1c1129dd9, type: 3}
+  grenadePrefab: {fileID: 8846705260052899089, guid: 1b49788f95dfc9645831b9139022344e, type: 3}
   playerNumber: 1
 --- !u!114 &3009452658112915294
 MonoBehaviour:

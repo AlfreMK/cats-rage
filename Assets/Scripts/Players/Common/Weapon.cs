@@ -6,47 +6,55 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject grenadePrefab = null;
     [SerializeField] private int playerNumber = 1;
     private string shootKey;
     private string punchKey;
-    private int healCooldown = 0;
-    private int healCooldownMax = 150;
+    private int coolDownShoot = 0;
+    private int coolDownShootMax = 70;
+    private int coolDownSpecial = 0;
+    private int coolDownSpecialMax = 300;
+    public int grenadesQuantity = 0;
     private Player player1;
     private Player player2;
 
-    void Awake() {
+    void Start() {
+        player1 = GameManager.Instance.GetPlayer1Script();
+        player2 = GameManager.Instance.GetPlayer2Script();
         if (playerNumber == 1) {
             shootKey = "Shoot";
             punchKey = "Punch";
+            grenadesQuantity = 3;
         } else if (playerNumber == 2) {
             shootKey = "Shoot2";
             punchKey = "Punch2";
         }
-        player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
-        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
     }
 
     void Update() {
-        if (Input.GetButtonDown(shootKey)) {
-            Shoot();
+        if (Input.GetAxisRaw(shootKey) != 0) {
+            CoolDownFunction(Shoot, ref coolDownShoot, coolDownShootMax);
         }
         if (playerNumber == 1 && Input.GetButtonDown(punchKey)) {
-            Meele();
+            if (grenadesQuantity > 0){
+                SpawnGrenade();
+            }
+            else {
+                Meele();
+            }
         }
         else if (playerNumber == 2 && Input.GetAxisRaw(punchKey) != 0) {
-            CoolDownFunction(Heal);
+            CoolDownFunction(Heal, ref coolDownSpecial, coolDownSpecialMax);
         }
     }
 
     void Shoot() {
-        // Debug.Log("Shooting");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     void Heal() {
-        // tags : "Player1", "Player2"
-        player1.TakeDamage(-10);
-        player2.TakeDamage(-10);
+        player1.TakeDamage(-20);
+        player2.TakeDamage(-20);
     }
 
     void Meele() {
@@ -57,15 +65,25 @@ public class Weapon : MonoBehaviour
             if (hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>() != null) {
                 hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>().TakeDamage(40);
             }
-
         }
     }
 
-    void CoolDownFunction(System.Action function) {
-        if (healCooldown < 0) {
-            healCooldown = healCooldownMax;
+    void SpawnGrenade(){
+        if (grenadesQuantity <= 0) {
+            return;
+        }
+        Vector3 spawnPosition = transform.position + transform.up * 0.5f;
+        Vector3 targetPosition = transform.position + transform.up * 0.5f + transform.right * 6f;
+        grenadePrefab.GetComponent<Grenade>().Spawn(spawnPosition, targetPosition);
+        grenadesQuantity --;
+    }
+
+
+    void CoolDownFunction(System.Action function, ref int cooldown, int cooldownMax) {
+        if (cooldown > cooldownMax) {
+            cooldown = 0;
             function();
         }
-        healCooldown--;
+        cooldown++;
     }
 }

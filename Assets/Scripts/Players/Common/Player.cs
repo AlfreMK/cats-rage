@@ -22,18 +22,20 @@ public class Player : MonoBehaviour
     private string verticalKey;
     private string shootKey;
     private string punchKey;
+    private static readonly int _animationIdle = Animator.StringToHash("Idle");
+    private static readonly int _animationAttacking = Animator.StringToHash("Shoot");
+    private static readonly int _animationRunning = Animator.StringToHash("Walk");
+    private static readonly int _animationSpecial = Animator.StringToHash("Special");
     public static Player Instance;
 
     Vector2 vector_position;
-
-    
-
+    Vector2 control;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     public Animator animator;
+
     void Awake()
     {
-
         //GameObject.DontDestroyOnLoad(this.gameObject);
 
         rb = GetComponent<Rigidbody2D>();
@@ -57,8 +59,7 @@ public class Player : MonoBehaviour
             punchKey = "Punch2";
         }
     }
-
-    Vector2 control;
+    
     // Update is called once per frame
     void Update()
     {
@@ -67,10 +68,29 @@ public class Player : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
         }
-        animator.SetBool("isWalking", control.magnitude != 0);
-        animator.SetBool("isShooting", Input.GetButtonDown(shootKey));
-        animator.SetBool("isPunching", Input.GetAxisRaw(punchKey) != 0);
+        animationController();
         rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);        
+    }
+
+
+    void animationController()
+    {
+        if (Input.GetAxisRaw(shootKey) != 0)
+        {
+            SetAnimationState(_animationAttacking);
+        }
+        else if (Input.GetAxisRaw(punchKey) != 0)
+        {
+            SetAnimationState(_animationSpecial);
+        }
+        else if (control.magnitude != 0)
+        {
+            SetAnimationState(_animationRunning);
+        }
+        else
+        {
+            SetAnimationState(_animationIdle);
+        }
     }
 
     public void teleport()
@@ -84,5 +104,10 @@ public class Player : MonoBehaviour
         health -= damage;
         // Debug.Log("Player " + playerNumber + " has " + health + " health");
         health = Mathf.Clamp(health, 0, maxHealth);
+    }
+
+    void SetAnimationState(int state)
+    {
+        animator.CrossFade(state, 0, 0);
     }
 }
