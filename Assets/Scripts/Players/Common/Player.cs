@@ -11,28 +11,38 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
+
+
+
+    public Player teamMate;
+    public Animator animator;
+    public static Player Instance;
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int health = 100;
     [SerializeField] private float verticalSpeed = 1.5f;
     [SerializeField] private float horizontalSpeed = 3f;
-
-    // Define the control keys for both players
     [SerializeField] private int playerNumber = 1;
+
+    private int movingDirection = 1;
     private string horizontalKey;
     private string verticalKey;
     private string shootKey;
     private string punchKey;
+    private string mountKey;
+
+    private bool isMounted = false;
+
     private static readonly int _animationIdle = Animator.StringToHash("Idle");
     private static readonly int _animationAttacking = Animator.StringToHash("Shoot");
     private static readonly int _animationRunning = Animator.StringToHash("Walk");
     private static readonly int _animationSpecial = Animator.StringToHash("Special");
-    public static Player Instance;
 
     Vector2 vector_position;
     Vector2 control;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
-    public Animator animator;
+
+
 
     void Awake()
     {
@@ -50,6 +60,7 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical";
             shootKey = "Shoot";
             punchKey = "Punch";
+            mountKey = "Mount";
         }
         else if (playerNumber == 2)
         {
@@ -57,6 +68,7 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical2";
             shootKey = "Shoot2";
             punchKey = "Punch2";
+            mountKey = "Mount2";
         }
     }
     
@@ -67,9 +79,26 @@ public class Player : MonoBehaviour
         if (control.x != 0)
         {
             transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
+            movingDirection = control.x > 0 ? 1 : -1;
         }
         animationController();
-        rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);        
+        if (Input.GetButtonDown(mountKey))
+        {
+            if (!isMounted)
+            {
+                if (Vector2.Distance(transform.position, teamMate.transform.position) < 2f && !teamMate.isMounted)
+                {
+                    isMounted = true;
+                }
+            }
+            else 
+            {
+                isMounted = false;
+                Vector2 unMountPosition = teamMate.transform.position;
+                transform.position = unMountPosition;
+            }
+        }
+        handleMovement(control);    
     }
 
 
@@ -83,7 +112,7 @@ public class Player : MonoBehaviour
         {
             SetAnimationState(_animationSpecial);
         }
-        else if (control.magnitude != 0)
+        else if (control.magnitude != 0 && !isMounted)
         {
             SetAnimationState(_animationRunning);
         }
@@ -106,8 +135,34 @@ public class Player : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
     }
 
+    public bool getIsMounted()
+    {
+        return isMounted;
+    }
+
     void SetAnimationState(int state)
     {
         animator.CrossFade(state, 0, 0);
+    }
+
+
+    void handleMovement(Vector2 control)
+    {
+        if (!isMounted)
+        {
+            rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
+        }
+        else
+        {
+            Vector3 mountPosition;
+            if (playerNumber == 1){
+                mountPosition = teamMate.transform.position + Vector3.up * 1.4f + Vector3.right * 0.3f;
+    
+            }
+            else {
+                mountPosition = teamMate.transform.position + Vector3.up * 1.4f + Vector3.left * 0.3f;
+            }
+            transform.position = mountPosition;
+        }
     }
 }

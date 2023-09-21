@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - startingPosition: {fileID: 11400000, guid: 0788f4417025b6c46bf124494558e937, type: 2}
   - animator: {instanceID: 0}
-  executionOrder: 25
+  executionOrder: 13
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
