@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
 
 
-    public Player teamMate;
+    public Player teammate;
     public Animator animator;
     public static Player Instance;
     [SerializeField] public int maxHealth = 100;
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         {
             if (!isMounted)
             {
-                if (Vector2.Distance(transform.position, teamMate.transform.position) < 2f && !teamMate.isMounted)
+                if (Vector2.Distance(transform.position, teammate.transform.position) < 2f && !teammate.isMounted)
                 {
                     isMounted = true;
                 }
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
             else 
             {
                 isMounted = false;
-                Vector2 unMountPosition = teamMate.transform.position;
+                Vector2 unMountPosition = teammate.transform.position;
                 transform.position = unMountPosition;
             }
         }
@@ -156,11 +156,11 @@ public class Player : MonoBehaviour
         {
             Vector3 mountPosition;
             if (playerNumber == 1){
-                mountPosition = teamMate.transform.position + Vector3.up * 1.4f + Vector3.right * 0.3f;
+                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.right * 0.3f;
     
             }
             else {
-                mountPosition = teamMate.transform.position + Vector3.up * 1.4f + Vector3.left * 0.3f;
+                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.left * 0.3f;
             }
             transform.position = mountPosition;
         }
