@@ -8,7 +8,6 @@ public class Wall : MonoBehaviour
     void Start()
     {
         // make the wall invisible
-        GetComponent<SpriteRenderer>().enabled = false;
+       GetComponent<SpriteRenderer>().enabled = false;
     }
-
 }
