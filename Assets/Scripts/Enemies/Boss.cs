@@ -53,7 +53,9 @@ public class Boss : MonoBehaviour, CanTakeDamage
 
 
     public void TakeDamage(int damage) {
+        Debug.Log(lifeBoss);
         lifeBoss -= damage;
+        Debug.Log(lifeBoss);
         if (lifeBoss <= 0) {
             SetAnimationState(_animationDefeat);
             Destroy(gameObject, 2.3f);

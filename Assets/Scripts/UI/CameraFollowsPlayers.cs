@@ -11,7 +11,7 @@ public class CameraFollowsPlayers : MonoBehaviour
     private Player player2;
     private bool isFollowing = true; // Add a flag to control following
     private bool firstScreen = true;
-    private bool bossAlive = false;
+    private bool bossAlive = true;
     private GameObject[] enemiesFirstScreen;
     private GameObject[] boss;
     private float remainingEnemies;
