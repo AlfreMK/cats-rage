@@ -7,8 +7,6 @@ TagManager:
   - Player1
   - Player2
   - Enemies
-  - EnemiesFirstScreen
-  - Boss
   layers:
   - Default
   - TransparentFX
