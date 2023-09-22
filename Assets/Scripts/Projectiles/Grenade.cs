@@ -28,6 +28,9 @@ public class Grenade : MonoBehaviour
         float horizontalSpeed = toPlayer.x / desiredTimeOfFlight;
         float verticalSpeed = toPlayer.y / desiredTimeOfFlight + 0.5f * 9.81f * desiredTimeOfFlight;
 
+        grenade.transform.rotation = Quaternion.Euler(0, horizontalSpeed > 0 ? 0 : 180, 0);
+
+
         rb = grenade.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(horizontalSpeed, verticalSpeed);
     }
