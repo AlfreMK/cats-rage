@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardController : MonoBehaviour
+public class WizardController : MonoBehaviour, CanTakeDamage
 {
     public GameObject arrowPrefab;
     public Transform firePoint;
@@ -40,8 +40,11 @@ public class WizardController : MonoBehaviour
     IEnumerator Move(){
         SetAnimationState(_animationRun);
 
-        float xRandomDistance = Random.Range(-1.5f, 1.5f);
-        float yRandomDistance = Random.Range(-1.5f, 1.5f);
+        float xRandomDistance;
+        float yRandomDistance;
+        Vector3 playerPosition = GameManager.Instance.GetAveragePlayerPosition();
+        xRandomDistance = playerPosition.x > transform.position.x ? 1.5f : -1.5f;
+        yRandomDistance = playerPosition.y > transform.position.y ? 1.5f : -1.5f;
 
         Vector3 initialPosition = transform.position;
         Vector3 targetPosition = initialPosition + new Vector3(xRandomDistance, yRandomDistance, 0);
@@ -63,6 +66,7 @@ public class WizardController : MonoBehaviour
 
     IEnumerator Attack()
     {
+        RotateTowardsPlayer();
         SetAnimationState(_animationAttack);
 
         yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
@@ -99,5 +103,17 @@ public class WizardController : MonoBehaviour
     void OnBecameVisible()
     {
         StartCoroutine(EnemyBehaviour());
+    }
+
+    void RotateTowardsPlayer()
+    {
+        if (GameManager.Instance.GetAveragePlayerPosition().x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }

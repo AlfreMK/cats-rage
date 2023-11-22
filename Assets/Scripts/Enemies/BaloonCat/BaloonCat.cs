@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaloonCat : MonoBehaviour, CanTakeDamage
 {
     public GameObject grenadePrefab;
-    public float moveSpeed = 2.0f;
+    public float moveSpeed = 0.001f;
     public float rotationSpeed = 2.0f;
     public float leftShotInterval = 4.0f;
     public float rightShotInterval = 8.0f;
@@ -25,6 +25,7 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
         animator = GetComponent<Animator>();
         player1 = GameManager.Instance.GetPlayer1();
         player2 = GameManager.Instance.GetPlayer2();
+        RotateTowardsPlayer();
     }
 
 
@@ -35,7 +36,8 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - 0.001f, transform.position.y, 0);
+        int direction = transform.rotation.eulerAngles.y == 0 ? -1 : 1;
+        transform.position += new Vector3(direction * moveSpeed, 0, 0);
     }
 
     IEnumerator EnemyBehaviour()
@@ -53,6 +55,7 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
 
     void Attack()
     {
+        RotateTowardsPlayer();
         SpawnGrenade();
     }
 
@@ -60,9 +63,6 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
     // Esta función se llama en la animación
     {
         Transform randomPlayer = Random.Range(0, 2) == 0 ? player1 : player2;
-
-
-    
         if (randomPlayer != null)
         {
             Vector3 spawnPosition = transform.position;
@@ -90,5 +90,18 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
     void OnBecameVisible()
     {
         StartCoroutine(EnemyBehaviour());
+    }
+
+    
+    void RotateTowardsPlayer()
+    {
+        if (GameManager.Instance.GetAveragePlayerPosition().x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }
