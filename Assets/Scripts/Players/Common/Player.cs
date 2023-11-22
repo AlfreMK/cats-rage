@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
 
 
 
+
     void Awake()
     {
         //GameObject.DontDestroyOnLoad(this.gameObject);
@@ -76,13 +77,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         control = new Vector2(Input.GetAxisRaw(horizontalKey), Input.GetAxisRaw(verticalKey));
-        if (control.x != 0)
+        if (control.x != 0 && GameManager.Instance.IsInputEnabled())
         {
             transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
             movingDirection = control.x > 0 ? 1 : -1;
         }
         animationController();
-        if (Input.GetButtonDown(mountKey))
+        if (Input.GetButtonDown(mountKey) && GameManager.Instance.IsInputEnabled())
         {
             if (!isMounted)
             {
@@ -104,15 +105,15 @@ public class Player : MonoBehaviour
 
     void animationController()
     {
-        if (Input.GetAxisRaw(shootKey) != 0)
+        if (Input.GetAxisRaw(shootKey) != 0 && GameManager.Instance.IsInputEnabled())
         {
             SetAnimationState(_animationAttacking);
         }
-        else if (Input.GetAxisRaw(punchKey) != 0)
+        else if (Input.GetAxisRaw(punchKey) != 0 && GameManager.Instance.IsInputEnabled())
         {
             SetAnimationState(_animationSpecial);
         }
-        else if (control.magnitude != 0 && !isMounted)
+        else if (control.magnitude != 0 && !isMounted && GameManager.Instance.IsInputEnabled())
         {
             SetAnimationState(_animationRunning);
         }
