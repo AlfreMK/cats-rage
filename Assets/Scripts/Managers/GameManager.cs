@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] public Player player1;
     [SerializeField] public Player player2;
+    [SerializeField] public CameraFollowsPlayers mainCamera;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
             (player1.health <= 0 || player2.health <= 0)){
             SceneManager.LoadScene("Lose");
         }
+    }
+
+    public CameraFollowsPlayers GetMainCamera()
+    {
+        return mainCamera;
     }
 
     public Transform GetPlayer1()

@@ -19,6 +19,9 @@ public class Archer : MonoBehaviour, CanTakeDamage
     private static readonly int _animationAttack = Animator.StringToHash("Attack");
     private static readonly int _animationRun = Animator.StringToHash("Run");
 
+    private Player player1;
+    private Player player2;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -40,8 +43,11 @@ public class Archer : MonoBehaviour, CanTakeDamage
     IEnumerator Move(){
         SetAnimationState(_animationRun);
 
-        float xRandomDistance = Random.Range(-1.5f, 1.5f);
-        float yRandomDistance = Random.Range(-1.5f, 1.5f);
+        float xRandomDistance;
+        float yRandomDistance;
+        Vector3 playerPosition = GameManager.Instance.GetAveragePlayerPosition();
+        xRandomDistance = playerPosition.x > transform.position.x ? 1.5f : -1.5f;
+        yRandomDistance = playerPosition.y > transform.position.y ? 1.5f : -1.5f;
 
         Vector3 initialPosition = transform.position;
         Vector3 targetPosition = initialPosition + new Vector3(xRandomDistance, yRandomDistance, 0);
@@ -63,6 +69,8 @@ public class Archer : MonoBehaviour, CanTakeDamage
 
     IEnumerator Attack()
     {
+        // invert the direction of the sprite if the player is on the right
+        RotateTowardsPlayer();
         SetAnimationState(_animationAttack);
 
         yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
@@ -99,5 +107,17 @@ public class Archer : MonoBehaviour, CanTakeDamage
     void OnBecameVisible()
     {
         StartCoroutine(EnemyBehaviour());
+    }
+
+    void RotateTowardsPlayer()
+    {
+        if (GameManager.Instance.GetAveragePlayerPosition().x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }
