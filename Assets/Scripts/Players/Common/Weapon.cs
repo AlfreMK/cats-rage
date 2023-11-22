@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     private Player player1;
     private Player player2;
 
+
     void Start()
     {
         player1 = GameManager.Instance.GetPlayer1Script();
@@ -34,7 +35,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (playerNumber == 1)
+        if (playerNumber == 1 && GameManager.Instance.IsInputEnabled())
         {
             if (Input.GetAxisRaw(shootKey) != 0 && !isShootingCooldown)
             {
@@ -52,7 +53,7 @@ public class Weapon : MonoBehaviour
                 }
             }
         }
-        else if (playerNumber == 2)
+        else if (playerNumber == 2 && GameManager.Instance.IsInputEnabled())
         {
             if (Input.GetAxisRaw(shootKey) != 0 && !isShootingCooldown)
             {

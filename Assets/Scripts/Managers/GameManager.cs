@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Player player1;
     [SerializeField] public Player player2;
     [SerializeField] public CameraFollowsPlayers mainCamera;
+    public static bool isInputEnabled = false;
 
 
     // Start is called before the first frame update
@@ -56,8 +57,19 @@ public class GameManager : MonoBehaviour
         return (player1.transform.position + player2.transform.position) / 2;
     }
 
+    public bool IsInputEnabled()
+    {
+        return isInputEnabled;
+    }
+
+    public void EnableInput()
+    {
+        isInputEnabled = true;
+    }
+
     public void Hello()
     {
         Debug.Log("Hello");
     }
+
 }
