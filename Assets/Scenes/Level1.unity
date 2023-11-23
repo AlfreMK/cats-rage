@@ -380,6 +380,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 0
+  yMaxGroundHeight: -3
 --- !u!4 &249354478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5657063797452826818, guid: 57473f6ab6ac6f341b58deaa4a036de8, type: 3}
@@ -1003,6 +1004,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 0
+  yMaxGroundHeight: -3
 --- !u!61 &618761750
 BoxCollider2D:
   m_ObjectHideFlags: 0

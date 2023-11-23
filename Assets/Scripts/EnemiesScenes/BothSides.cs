@@ -10,6 +10,7 @@ public class BothSides : MonoBehaviour
     public GameObject enemyFlyingType = null;
     public GameObject wall;
     public bool enemiesComingFromBothSides = true;
+    public float yMaxGroundHeight = -2.25f;
 
     private int enemiesSpawned = 0;
     private int enemiesAlive = 0;
@@ -21,8 +22,9 @@ public class BothSides : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        transform.localScale = new Vector3(0.01f, transform.localScale.y, transform.localScale.z);
         boxCollider = GetComponent<BoxCollider2D>();
+        // make the green square much much thinner
+        transform.localScale = new Vector3(0.01f, transform.localScale.y, transform.localScale.z);
         // make the wall invisible
         GetComponent<SpriteRenderer>().enabled = false;
     }
@@ -75,13 +77,13 @@ public class BothSides : MonoBehaviour
     void SpawnRandomEnemy(float x)
     {
         GameObject enemyPrefab = null;
-        float groundYPosition = Random.Range(-4f, -2.25f);
+        float groundYPosition = Random.Range(-4f, yMaxGroundHeight);
         float flyingYPosition = Random.Range(0f, 0.8f);
         float yPosition;
 
         if (enemyFlyingType == null) {
             enemyPrefab = enemyType;
-            yPosition = Random.Range(-4f, -2.25f);
+            yPosition = groundYPosition;
         } else {
             bool flyingEnemy = Random.Range(0, 2) == 0;
             enemyPrefab = flyingEnemy ? enemyFlyingType : enemyType;
