@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
     public static Player Instance;
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int health = 100;
-    [SerializeField] private float verticalSpeed = 1.5f;
-    [SerializeField] private float horizontalSpeed = 3f;
+    [SerializeField] private float verticalSpeed = 2f;
+    [SerializeField] private float horizontalSpeed = 4f;
     [SerializeField] private int playerNumber = 1;
 
     private int movingDirection = 1;
