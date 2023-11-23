@@ -175,6 +175,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 1763406234}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
+  yMaxGroundHeight: -2.25
 --- !u!61 &1672957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -534,6 +535,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 1763406234}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
+  yMaxGroundHeight: -2.25
 --- !u!4 &230983335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1054827854255040579, guid: c3c7aa1446053f1489995ac69da80434, type: 3}
@@ -609,6 +611,14 @@ PrefabInstance:
       propertyPath: teammate
       value: 
       objectReference: {fileID: 301950619}
+    - target: {fileID: 2650494184269056422, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
+      propertyPath: verticalSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650494184269056422, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
+      propertyPath: horizontalSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2927161354467961084, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.29
@@ -913,6 +923,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 1763406234}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
+  yMaxGroundHeight: -2.25
 --- !u!61 &618761750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1190,6 +1201,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 1763406234}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
+  yMaxGroundHeight: -2.25
 --- !u!61 &781658294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1356,7 +1368,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a023f8e61da29249ace031afd58f4b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2769,6 +2781,14 @@ PrefabInstance:
       propertyPath: teammate
       value: 
       objectReference: {fileID: 311560334}
+    - target: {fileID: 1100370251934644795, guid: cead3c9598f0a024f946be9047133e11, type: 3}
+      propertyPath: verticalSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100370251934644795, guid: cead3c9598f0a024f946be9047133e11, type: 3}
+      propertyPath: horizontalSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1359994320394049125, guid: cead3c9598f0a024f946be9047133e11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6

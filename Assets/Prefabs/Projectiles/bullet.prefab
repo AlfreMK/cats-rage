@@ -163,4 +163,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 1832014923318698095}
+  clip: {fileID: 8300000, guid: 90d0f1008dd8c144a9dc91f67cbc6b59, type: 3}
   damageBullet: 25

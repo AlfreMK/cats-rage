@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] private int damageBullet = 25;
 
+
     // Start is called before the first frame update
     void Start()
     {

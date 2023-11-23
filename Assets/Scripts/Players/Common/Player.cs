@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
     public static Player Instance;
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int health = 100;
-    [SerializeField] private float verticalSpeed = 2f;
-    [SerializeField] private float horizontalSpeed = 4f;
-    [SerializeField] private int playerNumber = 1;
+    [SerializeField] public float verticalSpeed = 2f;
+    [SerializeField] public float horizontalSpeed = 4f;
+    [SerializeField] public int playerNumber = 1;
 
     private int movingDirection = 1;
     private string horizontalKey;
@@ -83,39 +83,48 @@ public class Player : MonoBehaviour
             movingDirection = control.x > 0 ? 1 : -1;
         }
         animationController();
-        if (Input.GetButtonDown(mountKey) && GameManager.Instance.IsInputEnabled())
-        {
-            if (!isMounted)
+        if (GameManager.Instance.IsInputEnabled()){
+            if (Input.GetButtonDown(mountKey))
             {
-                if (Vector2.Distance(transform.position, teammate.transform.position) < 2f && !teammate.isMounted)
+                if (!isMounted)
                 {
-                    isMounted = true;
+                    if (Vector2.Distance(transform.position, teammate.transform.position) < 2f && !teammate.isMounted)
+                    {
+                        isMounted = true;
+                    }
+                }
+                else 
+                {
+                    isMounted = false;
+                    Vector2 unMountPosition = teammate.transform.position;
+                    transform.position = unMountPosition;
                 }
             }
-            else 
-            {
-                isMounted = false;
-                Vector2 unMountPosition = teammate.transform.position;
-                transform.position = unMountPosition;
-            }
+            handleMovement(control);    
         }
-        handleMovement(control);    
     }
 
 
     void animationController()
     {
-        if (Input.GetAxisRaw(shootKey) != 0 && GameManager.Instance.IsInputEnabled())
+        if (GameManager.Instance.IsInputEnabled())
         {
-            SetAnimationState(_animationAttacking);
-        }
-        else if (Input.GetAxisRaw(punchKey) != 0 && GameManager.Instance.IsInputEnabled())
-        {
-            SetAnimationState(_animationSpecial);
-        }
-        else if (control.magnitude != 0 && !isMounted && GameManager.Instance.IsInputEnabled())
-        {
-            SetAnimationState(_animationRunning);
+            if (Input.GetAxisRaw(shootKey) != 0)
+            {
+                SetAnimationState(_animationAttacking);
+            }
+            else if (Input.GetAxisRaw(punchKey) != 0)
+            {
+                SetAnimationState(_animationSpecial);
+            }
+            else if (control.magnitude != 0 && !isMounted)
+            {
+                SetAnimationState(_animationRunning);
+            }
+            else
+            {
+                SetAnimationState(_animationIdle);
+            }
         }
         else
         {

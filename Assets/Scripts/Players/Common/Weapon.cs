@@ -7,10 +7,12 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject grenadePrefab = null;
+    public AudioSource audioSource;
+    public AudioClip clip;
+
+
     [SerializeField] private int playerNumber = 1;
-    private string shootKey;
     private string punchKey;
-    private bool isShootingCooldown = false;
     private bool isSpecialCooldown = false;
     public int grenadesQuantity = 3;
     private Player player1;
@@ -23,12 +25,10 @@ public class Weapon : MonoBehaviour
         player2 = GameManager.Instance.GetPlayer2Script();
         if (playerNumber == 1)
         {
-            shootKey = "Shoot";
             punchKey = "Punch";
         }
         else if (playerNumber == 2)
         {
-            shootKey = "Shoot2";
             punchKey = "Punch2";
         }
     }
@@ -37,10 +37,6 @@ public class Weapon : MonoBehaviour
     {
         if (playerNumber == 1 && GameManager.Instance.IsInputEnabled())
         {
-            if (Input.GetAxisRaw(shootKey) != 0 && !isShootingCooldown)
-            {
-                StartCoroutine(ShootWithCooldown(0.8f));
-            }
             if (Input.GetButtonDown(punchKey))
             {
                 if (grenadesQuantity > 0)
@@ -55,23 +51,11 @@ public class Weapon : MonoBehaviour
         }
         else if (playerNumber == 2 && GameManager.Instance.IsInputEnabled())
         {
-            if (Input.GetAxisRaw(shootKey) != 0 && !isShootingCooldown)
-            {
-                StartCoroutine(ShootWithCooldown(1.0f));
-            }
             if (Input.GetAxisRaw(punchKey) != 0 && !isSpecialCooldown)
             {
                 StartCoroutine(HealWithCooldown(3.0f));
             }
         }
-    }
-
-    IEnumerator ShootWithCooldown(float cooldownTime)
-    {
-        isShootingCooldown = true;
-        Shoot();
-        yield return new WaitForSeconds(cooldownTime);
-        isShootingCooldown = false;
     }
 
     IEnumerator HealWithCooldown(float cooldownTime)
@@ -84,6 +68,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.PlayOneShot(clip, 1f);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
