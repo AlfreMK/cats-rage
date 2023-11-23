@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6795743515199082309}
   - component: {fileID: -4561029092762678930}
   m_Layer: 0
-  m_Name: soldier
+  m_Name: grenadier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 6517705194321101100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.571, y: -2.030551, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 7.541407, y: -2.030551, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1077115391
-  m_SortingLayer: 3
-  m_SortingOrder: 203
-  m_Sprite: {fileID: 224747527, guid: 26447fd0cf11bf64198466072abe6760, type: 3}
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -875298482, guid: e00f9151e552395439db5aa9888c6525, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.39, y: 0.62}
+    oldSize: {x: 0.27, y: 0.38}
     newSize: {x: 0.27, y: 0.38}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
