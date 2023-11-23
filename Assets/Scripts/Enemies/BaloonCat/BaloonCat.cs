@@ -44,7 +44,7 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
     {
         while (true)
         {
-            SpawnGrenade();
+            Attack();
 
             float randomWaitTime = Random.Range(leftShotInterval, rightShotInterval);
 
