@@ -76,7 +76,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.33333334
     functionName: SpawnGrenade
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 84031a897ac91d84baf610a627d2fe90, type: 3}
