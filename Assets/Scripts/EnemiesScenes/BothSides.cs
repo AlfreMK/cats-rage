@@ -77,8 +77,8 @@ public class BothSides : MonoBehaviour
     void SpawnRandomEnemy(float x)
     {
         GameObject enemyPrefab = null;
-        float groundYPosition = Random.Range(-4f, yMaxGroundHeight);
-        float flyingYPosition = Random.Range(0f, 0.8f);
+        float groundYPosition = Random.Range(-4.0f, yMaxGroundHeight);
+        float flyingYPosition = Random.Range(0.0f, 0.8f);
         float yPosition;
 
         if (enemyFlyingType == null) {

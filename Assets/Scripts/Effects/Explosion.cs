@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioSource audioSource;
+    public AudioClip clip;
+
+    void Start()
+    {
+        audioSource.PlayOneShot(clip, 1f);
+    }
 
     public void DestroyMe() { 
         Destroy(gameObject); 
