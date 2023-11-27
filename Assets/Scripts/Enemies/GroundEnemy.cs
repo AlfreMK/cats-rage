@@ -1,56 +1,50 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierController : MonoBehaviour, CanTakeDamage
+public class GroundEnemy : MonoBehaviour, CanTakeDamage
 {
-    public GameObject grenadePrefab;
+    public GameObject projectilePrefab;
+    public Transform firePoint;
     public float moveSpeed = 2.0f;
-    public float rotationSpeed = 2.0f;
     public float shotInterval = 2.0f;
-
     [SerializeField] public int health = 100;
 
     private Animator animator;
-    private Transform player1;
-    private Transform player2;
 
+    private int _animationIdle;
+    private int _animationAttack;
+    private int _animationRun;
+    private Rigidbody2D rb;
+    private Player player1;
+    private Player player2;
 
-    private static readonly int _animationIdle = Animator.StringToHash("Idle");
-    private static readonly int _animationAttacking = Animator.StringToHash("Attacking");
-    private static readonly int _animationRunning = Animator.StringToHash("Running");
-
-
-    void Start()
+    public virtual void Start()
     {
         animator = GetComponent<Animator>();
-        player1 = GameManager.Instance.GetPlayer1();
-        player2 = GameManager.Instance.GetPlayer2();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-
-    void SetAnimationState(int state)
+    public void AsignAnimation(string idle, string attack, string run)
     {
-        animator.CrossFade(state, 0, 0);
+        _animationIdle = Animator.StringToHash(idle);
+        _animationAttack = Animator.StringToHash(attack);
+        _animationRun = Animator.StringToHash(run);
     }
 
-    IEnumerator EnemyBehaviour()
+    public IEnumerator EnemyBehaviour()
     {
         while (true)
         {
-
-            // yield return Move();
-
+            yield return Move();
             yield return Attack();
 
-            float randomWaitTime = Random.Range(0.5f, 2.0f);
-
-            yield return new WaitForSeconds(randomWaitTime);
+            yield return new WaitForSeconds(1.0f);
         }
     }
 
-    IEnumerator Move()
-    {
-        SetAnimationState(_animationRunning);
+    public IEnumerator Move(){
+        SetAnimationState(_animationRun);
 
         float xRandomDistance;
         float yRandomDistance;
@@ -63,47 +57,42 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
 
         float journeyLength = Vector3.Distance(initialPosition, targetPosition);
         float startTime = Time.time;
-
-        while (transform.position != targetPosition)
+        float currJourneyLength = 0.0f;
+        while (currJourneyLength < journeyLength)
         {
             float distanceCovered = (Time.time - startTime) * moveSpeed;
             float fractionOfJourney = distanceCovered / journeyLength;
-
-            transform.position = Vector3.Lerp(initialPosition, targetPosition, fractionOfJourney);
+            currJourneyLength += distanceCovered/journeyLength;
+            rb.MovePosition(Vector3.Lerp(initialPosition, targetPosition, fractionOfJourney));
             yield return null;
         }
 
         SetAnimationState(_animationIdle);
     }
 
-
-    IEnumerator Attack()
+    public IEnumerator Attack()
     {
+        // invert the direction of the sprite if the player is on the right
         RotateTowardsPlayer();
-        SetAnimationState(_animationAttacking);
+        SetAnimationState(_animationAttack);
 
-        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.0f);
-        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.0f);
+        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
+        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.5f);
+        SpawnProyectile();
 
         SetAnimationState(_animationIdle);
 
     }
 
-    void SpawnGrenade()
-    // Esta función se llama en la animación
+    public void SpawnProyectile()
     {
-        Transform randomPlayer = Random.Range(0, 2) == 0 ? this.player1 : this.player2;
-    
-        if (randomPlayer != null)
-        {
-            Vector3 spawnPosition = transform.position + transform.up * 0.5f;
-
-    
-            grenadePrefab.GetComponent<Grenade>().Spawn(spawnPosition, randomPlayer.position);
-        }
-
+        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 
+    public void SetAnimationState(int state)
+    {
+        animator.CrossFade(state, 0, 0);
+    }
 
     public void TakeDamage(int damage)
     {
@@ -115,25 +104,23 @@ public class SoldierController : MonoBehaviour, CanTakeDamage
         StartCoroutine(ResetColor());
     }
 
-    
     public IEnumerator ResetColor()
     {
         yield return new WaitForSeconds(0.2f);
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
 
-
-    void OnBecameInvisible()
+    public void OnBecameInvisible()
     {
         StopAllCoroutines();
     }
 
-    void OnBecameVisible()
+    public void OnBecameVisible()
     {
         StartCoroutine(EnemyBehaviour());
     }
 
-    void RotateTowardsPlayer()
+    public void RotateTowardsPlayer()
     {
         if (GameManager.Instance.GetAveragePlayerPosition().x > transform.position.x)
         {

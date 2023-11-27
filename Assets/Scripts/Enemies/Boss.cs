@@ -53,13 +53,19 @@ public class Boss : MonoBehaviour, CanTakeDamage
 
 
     public void TakeDamage(int damage) {
-        Debug.Log(lifeBoss);
         lifeBoss -= damage;
-        Debug.Log(lifeBoss);
         if (lifeBoss <= 0) {
             SetAnimationState(_animationDefeat);
             Destroy(gameObject, 2.3f);
         }
+        GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+        StartCoroutine(ResetColor());
+    }
+    
+    public IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
 
     void SetAnimationState(int state)

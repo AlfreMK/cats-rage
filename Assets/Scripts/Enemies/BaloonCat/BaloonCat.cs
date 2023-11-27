@@ -79,6 +79,15 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
         if (health <= 0){
             Destroy(gameObject);
         }
+        GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+        StartCoroutine(ResetColor());
+    }
+
+    
+    public IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
 
 

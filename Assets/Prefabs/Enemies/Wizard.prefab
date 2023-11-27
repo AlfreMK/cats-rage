@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d851061501ef5547bcdb9614e622fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 159668659666640213, guid: 4c9211dcdb07dba47be7b0c9aa3446db, type: 3}
+  projectilePrefab: {fileID: 159668659666640213, guid: 4c9211dcdb07dba47be7b0c9aa3446db, type: 3}
   firePoint: {fileID: 9143343518054919584}
   moveSpeed: 2
   shotInterval: 2
