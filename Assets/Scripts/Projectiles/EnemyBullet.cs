@@ -20,8 +20,9 @@ public class EnemyBullet : MonoBehaviour
         if (player != null) {
             player.TakeDamage(damageBullet);
             GlobalVariables.Instance.AddScore(-damageBullet);
+            // Destroy(gameObject); // if we want to destroy the bullet only when it hits a player
         }
-        Destroy(gameObject);    // Destroy the bullet
+        Destroy(gameObject);    // if we want to destroy the bullet when it hits anything
     }
 
     void OnBecameInvisible() {

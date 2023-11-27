@@ -9,20 +9,20 @@ public class GroundEnemy : MonoBehaviour, CanTakeDamage
     public float moveSpeed = 2.0f;
     public float shotInterval = 2.0f;
     [SerializeField] public int health = 100;
+    public AudioSource audioSource;
+    public AudioClip clipProjectile;
 
     private Animator animator;
 
     private int _animationIdle;
     private int _animationAttack;
     private int _animationRun;
-    private Rigidbody2D rb;
     private Player player1;
     private Player player2;
 
     public virtual void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     public void AsignAnimation(string idle, string attack, string run)
@@ -63,7 +63,8 @@ public class GroundEnemy : MonoBehaviour, CanTakeDamage
             float distanceCovered = (Time.time - startTime) * moveSpeed;
             float fractionOfJourney = distanceCovered / journeyLength;
             currJourneyLength += distanceCovered/journeyLength;
-            rb.MovePosition(Vector3.Lerp(initialPosition, targetPosition, fractionOfJourney));
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, fractionOfJourney);
+
             yield return null;
         }
 
@@ -74,6 +75,7 @@ public class GroundEnemy : MonoBehaviour, CanTakeDamage
     {
         // invert the direction of the sprite if the player is on the right
         RotateTowardsPlayer();
+        audioSource.PlayOneShot(clipProjectile, 1f);
         SetAnimationState(_animationAttack);
 
         yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
