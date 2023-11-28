@@ -20,7 +20,9 @@ public class Bullet : MonoBehaviour
         if (damageable != null) {
             damageable.TakeDamage(damageBullet);
         }
-        Destroy(gameObject);    // Destroy the bullet
+        if (hitInfo.GetComponent<BothSides>() == null) {
+            Destroy(gameObject);    // Destroy the bullet
+        }
     }
 
     void OnBecameInvisible() {
