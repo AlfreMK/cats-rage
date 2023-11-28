@@ -6,7 +6,7 @@ public class BothSides : MonoBehaviour
 {
     public int enemiesToSpawn = 4;
     public int spawnRateInMs = 1000;
-    public GameObject enemyType;
+    public GameObject enemyType = null;
     public GameObject enemyFlyingType = null;
     public GameObject wall;
     public bool enemiesComingFromBothSides = true;
@@ -44,9 +44,15 @@ public class BothSides : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        // setting camera
+        if (hitInfo.GetComponent<Player>() == null) {
+            return;
+        }
         GameManager.Instance.GetMainCamera().setIsFollowing(false);
         GameManager.Instance.GetMainCamera().setPosition(transform.position.x);
+        GameManager.Instance.GetPlayer1Script().transform.position = new Vector2(
+            transform.position.x - 1, GameManager.Instance.GetPlayer1Script().transform.position.y);
+        GameManager.Instance.GetPlayer2Script().transform.position = new Vector2(
+            transform.position.x + 1, GameManager.Instance.GetPlayer2Script().transform.position.y);
         
         CreateWalls();
         StartCoroutine(SpawnEnemies());
@@ -77,13 +83,16 @@ public class BothSides : MonoBehaviour
     void SpawnRandomEnemy(float x)
     {
         GameObject enemyPrefab = null;
-        float groundYPosition = Random.Range(-4.0f, yMaxGroundHeight);
-        float flyingYPosition = Random.Range(0.0f, 0.8f);
+        float groundYPosition = Random.Range(-5.0f, yMaxGroundHeight);
+        float flyingYPosition = Random.Range(0.0f, 0.6f);
         float yPosition;
 
         if (enemyFlyingType == null) {
             enemyPrefab = enemyType;
             yPosition = groundYPosition;
+        } else if (enemyType == null) {
+            enemyPrefab = enemyFlyingType;
+            yPosition = flyingYPosition;
         } else {
             bool flyingEnemy = Random.Range(0, 2) == 0;
             enemyPrefab = flyingEnemy ? enemyFlyingType : enemyType;
