@@ -20,6 +20,12 @@ public class MenuControl : MonoBehaviour
 
     private bool isMenu = true;
 
+    void Start()
+    {
+        startGame.color = new Color32(255, 101, 255, 255);
+        mushroom.transform.position = new Vector3(-2.0f, -2.6f, 0);
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -38,15 +44,15 @@ public class MenuControl : MonoBehaviour
             audioSource.PlayOneShot(changeOption);
             optionSelected = "instructions";
             startGame.color = new Color32(255, 255, 255, 255);
-            instructions.color = new Color32(50, 255, 11, 255);
-            mushroom.transform.position = new Vector3(-2, -3.7f, 0);
+            instructions.color = new Color32(255, 101, 255, 255);
+            mushroom.transform.position = new Vector3(-2.25f, -3.7f, 0);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow)){
             audioSource.PlayOneShot(changeOption);
             optionSelected = "start";
-            startGame.color = new Color32(50, 255, 11, 255);
+            startGame.color = new Color32(255, 101, 255, 255);
             instructions.color = new Color32(255, 255, 255, 255);
-            mushroom.transform.position = new Vector3(-1.8f, -2.4f, 0);
+            mushroom.transform.position = new Vector3(-2.0f, -2.6f, 0);
         }
         if (Input.GetKeyDown(KeyCode.Return)){
             if (optionSelected == "start"){
