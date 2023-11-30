@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class KeyUpAndDown : MonoBehaviour
 {
-    private float speed = 0.25f;
-    private float distanceUp = 0.25f;
+    public float speed = 0.25f;
+    public float distanceUp = 0.25f;
     private float initialX;
     private float initialY;
  
