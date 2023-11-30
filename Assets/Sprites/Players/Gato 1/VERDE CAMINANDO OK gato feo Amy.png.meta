@@ -121,18 +121,370 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: verde 1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 515
+        width: 1469
+        height: 1998
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5202c7bc13697d56ea68a474a1af268a
+      internalID: 1735930300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: verde 2
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 575
+        width: 1386
+        height: 1875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713135ed2f5ef6109878a68f4068dfe5
+      internalID: 1319570712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc0
+      rect:
+        serializedVersion: 2
+        x: 3296
+        y: 536
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76de0781eebde4661ae44bac59c3bc87
+      internalID: 30772517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc1
+      rect:
+        serializedVersion: 2
+        x: 4965
+        y: 516
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dff47e29bdec7fc84416f91acef6eb
+      internalID: -164873943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc2
+      rect:
+        serializedVersion: 2
+        x: 6657
+        y: 563
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5051562c4d02c7ac9e74123bd69fd3f
+      internalID: -1891605736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc3
+      rect:
+        serializedVersion: 2
+        x: 8301
+        y: 551
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753f0af528d3fb8e79c5cc97b747aa67
+      internalID: -1888364511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc4
+      rect:
+        serializedVersion: 2
+        x: 9994
+        y: 540
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb08ce24c07a8f3689bbb4264817910
+      internalID: 1412099958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc5
+      rect:
+        serializedVersion: 2
+        x: 11687
+        y: 515
+        width: 1592
+        height: 1935
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d561c6f64274c030a8db68af4ffda634
+      internalID: 1027891619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc6
+      rect:
+        serializedVersion: 2
+        x: 13424
+        y: 559
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37fbbc4eecafed24bc2842e6bad8c7f
+      internalID: -735208626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc7
+      rect:
+        serializedVersion: 2
+        x: 15205
+        y: 545
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251e9546be9b184338819079ebd75a62
+      internalID: 1310600904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc8
+      rect:
+        serializedVersion: 2
+        x: 16930
+        y: 535
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336595b2f4c1c671fbe355da88967919
+      internalID: -1837639149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc9
+      rect:
+        serializedVersion: 2
+        x: 18657
+        y: 535
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d5e907f79b7670aafd3c3033d22392
+      internalID: 794567061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc10
+      rect:
+        serializedVersion: 2
+        x: 20383
+        y: 541
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73934cba171c2519eb0637c863f90943
+      internalID: -571993366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc11
+      rect:
+        serializedVersion: 2
+        x: 22075
+        y: 518
+        width: 1592
+        height: 1935
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215171eb8e21949bfa7ec2ea3b4b5fe1
+      internalID: 746830338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc12
+      rect:
+        serializedVersion: 2
+        x: 23794
+        y: 545
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd8c4819420369e5979db02d1fee539
+      internalID: 290852031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vc13
+      rect:
+        serializedVersion: 2
+        x: 25477
+        y: 506
+        width: 1592
+        height: 1895
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3810fe235a18e18889c42db13ae06b
+      internalID: -2114703116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0a095fe71d223173683952e0e23ced91
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vc0: 30772517
+      vc1: -164873943
+      vc10: -571993366
+      vc11: 746830338
+      vc12: 290852031
+      vc13: -2114703116
+      vc2: -1891605736
+      vc3: -1888364511
+      vc4: 1412099958
+      vc5: 1027891619
+      vc6: -735208626
+      vc7: 1310600904
+      vc8: -1837639149
+      vc9: 794567061
+      verde 1: 1735930300
+      verde 2: 1319570712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
