@@ -121,18 +121,62 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: secuencia gato amy CAMINANDO_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 618
+        width: 1262
+        height: 1813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96c8cd22c24d29e3a61e4cfcc0e272d
+      internalID: 733198826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secuencia gato amy CAMINANDO_1
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 583
+        width: 1367
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32835e9bf864d5a39a2bc26b0205d13f
+      internalID: -920906707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 86bbcf684408328dbb7eb4a4dd31c8e4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      secuencia gato amy CAMINANDO_0: 733198826
+      secuencia gato amy CAMINANDO_1: -920906707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
