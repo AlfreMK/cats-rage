@@ -16,7 +16,11 @@ public class OrderInLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sr.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        if (!PauseMenu.GameIsPaused)
+        {
+            sr.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        }
+       
     }
 
 }
