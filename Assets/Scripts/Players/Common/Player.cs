@@ -77,12 +77,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         control = new Vector2(Input.GetAxisRaw(horizontalKey), Input.GetAxisRaw(verticalKey));
-        if (control.x != 0 && GameManager.Instance.IsInputEnabled())
+        if (control.x != 0 && GameManager.Instance.IsInputEnabled() && !PauseMenu.GameIsPaused)
         {
             transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
             movingDirection = control.x > 0 ? 1 : -1;
         }
-        animationController();
+        if (!PauseMenu.GameIsPaused)
+        {
+            animationController();
+        }
         if (GameManager.Instance.IsInputEnabled()){
             if (Input.GetButtonDown(mountKey))
             {

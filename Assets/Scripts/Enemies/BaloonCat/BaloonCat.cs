@@ -36,8 +36,11 @@ public class BaloonCat : MonoBehaviour, CanTakeDamage
 
     void Update()
     {
-        int direction = transform.rotation.eulerAngles.y == 0 ? -1 : 1;
-        transform.position += new Vector3(direction * moveSpeed, 0, 0);
+        if (!PauseMenu.GameIsPaused)
+        {
+            int direction = transform.rotation.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(direction * moveSpeed, 0, 0);
+        }
     }
 
     IEnumerator EnemyBehaviour()
