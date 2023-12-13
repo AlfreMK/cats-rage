@@ -23,7 +23,11 @@ public class Player : MonoBehaviour
     [SerializeField] public float horizontalSpeed = 4f;
     [SerializeField] public int playerNumber = 1;
 
+    public GameObject freezeIndicatorPrefab; // Drag your image prefab here in the Inspector
+    private GameObject freezeIndicator;
+
     private int movingDirection = 1;
+    private List<Coroutine> freezeCoroutines = new List<Coroutine>();
     private string horizontalKey;
     private string verticalKey;
     private string shootKey;
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
     private string mountKey;
 
     private bool isMounted = false;
+    private bool isFrozen = false;
 
     private static readonly int _animationIdle = Animator.StringToHash("Idle");
     private static readonly int _animationAttacking = Animator.StringToHash("Shoot");
@@ -77,16 +82,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         control = new Vector2(Input.GetAxisRaw(horizontalKey), Input.GetAxisRaw(verticalKey));
-        if (control.x != 0 && GameManager.Instance.IsInputEnabled() && !PauseMenu.GameIsPaused)
+        if (control.x != 0 && GameManager.Instance.IsInputEnabled() && !PauseMenu.GameIsPaused && !isFrozen)
         {
             transform.rotation = Quaternion.Euler(0, control.x > 0 ? 0 : 180, 0);
             movingDirection = control.x > 0 ? 1 : -1;
         }
-        if (!PauseMenu.GameIsPaused)
+        if (!PauseMenu.GameIsPaused && !isFrozen)
         {
             animationController();
         }
-        if (GameManager.Instance.IsInputEnabled()){
+        if (GameManager.Instance.IsInputEnabled() && !isFrozen){
             if (Input.GetButtonDown(mountKey))
             {
                 if (!isMounted)
@@ -148,6 +153,71 @@ public class Player : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
     }
 
+    public void Freeze()
+    {
+        isFrozen = true;
+        StopPlayer();
+        if (freezeCoroutines.Count == 0)
+        {
+            ShowFreezeIndicator();
+        }
+        StartCoroutine(FreezeCoroutine());
+    }
+
+    private void StopPlayer()
+    {
+        rb.velocity = Vector2.zero;
+        animator.speed = 0f;
+
+    }
+
+    private IEnumerator FreezeCoroutine()
+    {
+        // Create a new freeze coroutine and add it to the list
+        Coroutine freezeCoroutine = StartCoroutine(InternalFreezeCoroutine());
+
+        // Add the coroutine to the list
+        freezeCoroutines.Add(freezeCoroutine);
+
+        // Wait for the freeze coroutine to finish
+        yield return freezeCoroutine;
+
+        // Remove the finished coroutine from the list
+        freezeCoroutines.Remove(freezeCoroutine);
+
+        // If there are no ongoing freezes, set isFrozen to false
+        if (freezeCoroutines.Count == 0)
+        {
+            animator.speed = 1f;
+            HideFreezeIndicator();
+            isFrozen = false;
+        }
+    }
+    private IEnumerator InternalFreezeCoroutine()
+    {
+        // Freeze the player for 2 seconds
+        yield return new WaitForSeconds(2f);
+    }
+
+    private void ShowFreezeIndicator()
+    {
+        Vector3 spawnPosition = transform.position + Vector3.up * 1.1f + Vector3.left * 0.2f; // Adjust the Y coordinate as needed
+        freezeIndicator = Instantiate(freezeIndicatorPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    private void HideFreezeIndicator()
+    {
+        Freeze freezeIndicatorScript = freezeIndicator.GetComponent<Freeze>();
+
+        // Destroy the freeze indicator object
+        if (freezeIndicator != null)
+        {
+            freezeIndicatorScript.DestroyMe();
+        }
+    }
+
+
+
     public bool getIsMounted()
     {
         return isMounted;
@@ -161,7 +231,7 @@ public class Player : MonoBehaviour
 
     void handleMovement(Vector2 control)
     {
-        if (!isMounted)
+        if (!isMounted && !isFrozen)
         {
             rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
         }
