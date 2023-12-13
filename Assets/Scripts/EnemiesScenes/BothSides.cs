@@ -18,6 +18,7 @@ public class BothSides : MonoBehaviour
     private GameObject rightWall;
     private BoxCollider2D boxCollider;
     private bool hasTriggered = false;
+    private bool hasSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,9 +37,16 @@ public class BothSides : MonoBehaviour
             if (enemiesSpawned == enemiesToSpawn && enemiesAlive == 0)
             {
                 GameManager.Instance.GetMainCamera().setIsFollowing(true);
+                GameManager.Instance.SetMaxX(Mathf.Infinity);
                 Destroy(leftWall);
                 Destroy(rightWall);
                 Destroy(gameObject);
+            }
+            if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
+                GameManager.Instance.GetMainCamera().setIsFollowing(false);
+                CreateWalls();
+                StartCoroutine(SpawnEnemies());
+                hasSpawned = true;
             }
         }
     }
@@ -47,15 +55,7 @@ public class BothSides : MonoBehaviour
         if (hitInfo.GetComponent<Player>() == null) {
             return;
         }
-        GameManager.Instance.GetMainCamera().setIsFollowing(false);
-        GameManager.Instance.GetMainCamera().setPosition(transform.position.x);
-        GameManager.Instance.GetPlayer1Script().transform.position = new Vector2(
-            transform.position.x - 1, GameManager.Instance.GetPlayer1Script().transform.position.y);
-        GameManager.Instance.GetPlayer2Script().transform.position = new Vector2(
-            transform.position.x + 1, GameManager.Instance.GetPlayer2Script().transform.position.y);
-        
-        CreateWalls();
-        StartCoroutine(SpawnEnemies());
+        GameManager.Instance.SetMaxX(transform.position.x);
         boxCollider.enabled = false;
         hasTriggered = true;
     }

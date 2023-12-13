@@ -12,6 +12,8 @@ public class CameraFollowsPlayers : MonoBehaviour
     private Player player1;
     private Player player2;
     private bool isFollowing = true; // Add a flag to control following
+    private Vector3 maxDistanceToLeftPlayer = new Vector3(-3.0f, 0, 0);
+    public float maxX = Mathf.Infinity;
     // private bool firstScreen = true;
     // private bool bossAlive = true;
     // private GameObject[] enemiesFirstScreen;
@@ -28,20 +30,21 @@ public class CameraFollowsPlayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 middlePoint = GameManager.Instance.GetAveragePlayerPosition();
-
-        if (player1.getIsMounted())
+        // Vector3 middlePoint = GameManager.Instance.GetAveragePlayerPosition();
+        Vector3 leftPlayer = player1.transform.position;
+        if (player2.transform.position.x < leftPlayer.x)
         {
-            middlePoint = player2.transform.position;
-        }
-        if (player2.getIsMounted())
-        {
-            middlePoint = player1.transform.position;
+            leftPlayer = player2.transform.position;
         }
 
-        if (isFollowing)
+        if (isFollowing && leftPlayer.x > maxDistanceToLeftPlayer.x + transform.position.x)
         {
-            transform.position = new Vector3(Mathf.Clamp(middlePoint.x, LimitXLeft, LimitXRight), 0, -10);
+            Vector3 cameraPosition = new Vector3(leftPlayer.x - maxDistanceToLeftPlayer.x, 0, -10);
+            if (cameraPosition.x >= maxX)
+            {
+                cameraPosition.x = maxX;
+            }
+            transform.position = new Vector3(Mathf.Clamp(cameraPosition.x, LimitXLeft, LimitXRight), 0, -10);
         }
     }
 

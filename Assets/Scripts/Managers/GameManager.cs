@@ -52,6 +52,18 @@ public class GameManager : MonoBehaviour
         return player2;
     }
 
+    public Player GetLeftPlayer()
+    {
+        if (player1.transform.position.x < player2.transform.position.x)
+        {
+            return player1;
+        }
+        else
+        {
+            return player2;
+        }
+    }
+
     public Vector2 GetAveragePlayerPosition()
     {
         return (player1.transform.position + player2.transform.position) / 2;
@@ -72,10 +84,20 @@ public class GameManager : MonoBehaviour
         isInputEnabled = false;
     }
 
+    public void SetMaxX(float maxX)
+    {
+        mainCamera.maxX = maxX;
+    }
+
+    public bool IsCameraInMaxX()
+    {
+        return mainCamera.transform.position.x == mainCamera.maxX;
+    }
 
     public void Hello()
     {
         Debug.Log("Hello");
     }
+
 
 }
