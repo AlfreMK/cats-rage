@@ -20,12 +20,13 @@ public class BothSides : MonoBehaviour
     private bool hasTriggered = false;
     private bool hasSpawned = false;
 
+    private float initialPosX;
+
     // Start is called before the first frame update
     void Start()
     {   
         boxCollider = GetComponent<BoxCollider2D>();
-        // make the green square much much thinner
-        transform.localScale = new Vector3(0.01f, transform.localScale.y, transform.localScale.z);
+        initialPosX = transform.position.x;
         // make the wall invisible
         GetComponent<SpriteRenderer>().enabled = false;
     }
@@ -36,11 +37,11 @@ public class BothSides : MonoBehaviour
             enemiesAlive = GameObject.FindGameObjectsWithTag("EnemyBothSides").Length;
             if (enemiesSpawned == enemiesToSpawn && enemiesAlive == 0)
             {
-                GameManager.Instance.GetMainCamera().setIsFollowing(true);
                 GameManager.Instance.SetMaxX(Mathf.Infinity);
                 Destroy(leftWall);
                 Destroy(rightWall);
                 Destroy(gameObject);
+                GameManager.Instance.GetMainCamera().MakeTransition();
             }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 GameManager.Instance.GetMainCamera().setIsFollowing(false);
@@ -52,11 +53,12 @@ public class BothSides : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        if (hitInfo.GetComponent<Player>() == null) {
+        if (hitInfo.tag != "Player1") {
             return;
         }
-        GameManager.Instance.SetMaxX(transform.position.x);
         boxCollider.enabled = false;
+        GameManager.Instance.SetMaxX(initialPosX);
+        transform.localScale = new Vector3(0.1f, transform.localScale.y, transform.localScale.z);
         hasTriggered = true;
     }
 
