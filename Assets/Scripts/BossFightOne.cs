@@ -20,6 +20,7 @@ public class BossFightOne : MonoBehaviour
     private bool hasSpawned = false;
 
     private float initialPosX;
+    public GameObject Arr;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +37,7 @@ public class BossFightOne : MonoBehaviour
         if (hasTriggered) {
             if (boss.lifeBoss <= 0)
             {
-                GameManager.Instance.SetMaxX(Mathf.Infinity);
-                Destroy(leftWall);
-                Destroy(rightWall);
-                GameManager.Instance.GetMainCamera().MakeTransition();
-                Destroy(gameObject, 2.4f);
-                mainMusic.Play();
+                StartCoroutine(final());
             }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 Player player1 = GameManager.Instance.GetPlayer1Script();
@@ -50,6 +46,7 @@ public class BossFightOne : MonoBehaviour
                 player2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                 GameManager.Instance.GetMainCamera().setIsFollowing(false);
                 GameManager.Instance.DisableInput();
+                Arr.SetActive(false);
                 CreateWalls();
                 hasSpawned = true;
                 StartFightAnimation();
@@ -97,9 +94,25 @@ public class BossFightOne : MonoBehaviour
     public void EndAnimation()
     {
         GameManager.Instance.EnableInput();
-        consistencyWall.SetActive(false);
         boss.startAttacking();
 
+    }
+
+    public void fireAnim()
+    {
+        boss.fireAnim();
+
+    }
+
+    IEnumerator final(){
+        yield return new WaitForSeconds(2.3f);
+        GameManager.Instance.SetMaxX(Mathf.Infinity);
+        Destroy(leftWall);
+        Destroy(rightWall);
+        GameManager.Instance.GetMainCamera().MakeTransition();
+        Destroy(gameObject);
+        Arr.SetActive(true);
+        mainMusic.Play();
     }
 
 }

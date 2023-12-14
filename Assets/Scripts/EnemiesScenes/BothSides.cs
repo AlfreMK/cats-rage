@@ -22,6 +22,8 @@ public class BothSides : MonoBehaviour
 
     private float initialPosX;
 
+    public GameObject Arr;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -41,10 +43,12 @@ public class BothSides : MonoBehaviour
                 Destroy(leftWall);
                 Destroy(rightWall);
                 GameManager.Instance.GetMainCamera().MakeTransition();
+                Arr.SetActive(true);
                 Destroy(gameObject);
             }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 GameManager.Instance.GetMainCamera().setIsFollowing(false);
+                Arr.SetActive(false);
                 CreateWalls();
                 StartCoroutine(SpawnEnemies());
                 hasSpawned = true;

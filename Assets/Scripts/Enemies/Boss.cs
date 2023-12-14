@@ -35,6 +35,8 @@ public class Boss : MonoBehaviour, CanTakeDamage
     private bool isDefeated = false;
 
     private bool isSpawingMeteors = false;
+
+    private bool isAnim = true;
     
     // Start is called before the first frame update
     void Start()
@@ -163,21 +165,15 @@ public class Boss : MonoBehaviour, CanTakeDamage
                 yield return new WaitForSeconds(2.0f);
             }
             else if (secondPhase){
-                if (!fire.activeSelf){
+                if (!shield.activeSelf){
                     SetAnimationState(_animationAttack);
                     yield return new WaitForSeconds(1.0f);
                 }
                 else{
-                    if (!shield.activeSelf){
-                        SetAnimationState(_animationAttack);
-                        yield return new WaitForSeconds(1.0f);
+                    if (!isSpawingMeteors){
+                        StartCoroutine("SpawnMeteors");
                     }
-                    else{
-                        if (!isSpawingMeteors){
-                            StartCoroutine("SpawnMeteors");
-                        }
-                        yield return new WaitForSeconds(1.0f);
-                    }
+                    yield return new WaitForSeconds(1.0f);
                 }
             }
 
@@ -194,17 +190,16 @@ public class Boss : MonoBehaviour, CanTakeDamage
     }
 
     void makeBullet(){
+        if (isAnim){
+            isAnim = false;
+            fire.SetActive(true);
+            return;  
+        }
         if (firstPhase){
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
         else if (secondPhase){
-            if (!fire.activeSelf){
-                consistencyWall.SetActive(true);
-                fire.SetActive(true);   
-            }
-            else{
-                shield.SetActive(true);
-            }
+            shield.SetActive(true);
         }
         else if (thirdPhase && shield.activeSelf){
             shield.SetActive(false);
@@ -293,5 +288,9 @@ public class Boss : MonoBehaviour, CanTakeDamage
             transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
             yield return null;
         }
+    }
+
+    public void fireAnim(){
+        SetAnimationState(_animationAttack);
     }
 }
