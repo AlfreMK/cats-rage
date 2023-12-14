@@ -13,6 +13,7 @@ public class BothSides : MonoBehaviour
     public float yMaxGroundHeight = -2.25f;
 
     private int enemiesSpawned = 0;
+    private int enemiesSpawning = 0;
     private int enemiesAlive = 0;
     private GameObject leftWall;
     private GameObject rightWall;
@@ -21,6 +22,9 @@ public class BothSides : MonoBehaviour
     private bool hasSpawned = false;
 
     private float initialPosX;
+
+    public GameObject Arr;
+    public GameObject Portal;
 
     // Start is called before the first frame update
     void Start()
@@ -35,16 +39,18 @@ public class BothSides : MonoBehaviour
     {
         if (hasTriggered) {
             enemiesAlive = GameObject.FindGameObjectsWithTag("EnemyBothSides").Length;
-            if (enemiesSpawned == enemiesToSpawn && enemiesAlive == 0)
+            if (enemiesSpawned == enemiesToSpawn && enemiesAlive == 0 && enemiesSpawning == 0)
             {
                 GameManager.Instance.SetMaxX(Mathf.Infinity);
                 Destroy(leftWall);
                 Destroy(rightWall);
-                Destroy(gameObject);
                 GameManager.Instance.GetMainCamera().MakeTransition();
+                Arr.SetActive(true);
+                Destroy(gameObject);
             }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 GameManager.Instance.GetMainCamera().setIsFollowing(false);
+                Arr.SetActive(false);
                 CreateWalls();
                 StartCoroutine(SpawnEnemies());
                 hasSpawned = true;
@@ -70,22 +76,22 @@ public class BothSides : MonoBehaviour
             // spawn left, then right and repeat
             if (enemiesSpawned % 2 == 0 && enemiesComingFromBothSides)
             {
-                SpawnRandomEnemy(leftWall.transform.position.x + 0.5f);
+                SpawnRandomEnemy(leftWall.transform.position.x + 0.5f, 0);
             }
             else
             {
-                SpawnRandomEnemy(rightWall.transform.position.x - 0.5f);
+                SpawnRandomEnemy(rightWall.transform.position.x - 0.5f, 180);
             }
             enemiesSpawned++;
-            enemiesAlive++;
+            enemiesSpawning++;
         }
     }
 
 
-    void SpawnRandomEnemy(float x)
+    void SpawnRandomEnemy(float x, float rotation)
     {
         GameObject enemyPrefab = null;
-        float groundYPosition = Random.Range(-5.0f, yMaxGroundHeight);
+        float groundYPosition = Random.Range(-4.5f, yMaxGroundHeight);
         float flyingYPosition = Random.Range(0.0f, 0.6f);
         float yPosition;
 
@@ -100,9 +106,21 @@ public class BothSides : MonoBehaviour
             enemyPrefab = flyingEnemy ? enemyFlyingType : enemyType;
             yPosition = flyingEnemy ? flyingYPosition : groundYPosition;
         }
+        GameObject po = Instantiate(Portal, new Vector2(x, yPosition + 0.5f), Quaternion.Euler(new Vector3(0, rotation, 0)));
+        float offset = 1.0f;
+        if (rotation == 180) {
+            offset = -1.0f;
+        }
+        StartCoroutine(spawnWithDelay(x + offset, yPosition, enemyPrefab));
+    }
 
+    IEnumerator spawnWithDelay(float x, float yPosition, GameObject enemyPrefab)
+    {
+        yield return new WaitForSeconds(1);
         GameObject enemy = Instantiate(enemyPrefab, new Vector2(x, yPosition), Quaternion.identity);
         enemy.tag = "EnemyBothSides";
+        yield return new WaitForSeconds(0.1f);
+        enemiesSpawning--;
     }
     
     // get edges of both sides

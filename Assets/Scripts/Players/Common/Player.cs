@@ -32,9 +32,7 @@ public class Player : MonoBehaviour
     private string verticalKey;
     private string shootKey;
     private string punchKey;
-    private string mountKey;
 
-    private bool isMounted = false;
     private bool isFrozen = false;
 
     private static readonly int _animationIdle = Animator.StringToHash("Idle");
@@ -66,7 +64,6 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical";
             shootKey = "Shoot";
             punchKey = "Punch";
-            mountKey = "Mount";
         }
         else if (playerNumber == 2)
         {
@@ -74,7 +71,6 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical2";
             shootKey = "Shoot2";
             punchKey = "Punch2";
-            mountKey = "Mount2";
         }
     }
     
@@ -91,23 +87,7 @@ public class Player : MonoBehaviour
         {
             animationController();
         }
-        if (GameManager.Instance.IsInputEnabled() && !isFrozen){
-            if (Input.GetButtonDown(mountKey))
-            {
-                if (!isMounted)
-                {
-                    if (Vector2.Distance(transform.position, teammate.transform.position) < 2f && !teammate.isMounted)
-                    {
-                        isMounted = true;
-                    }
-                }
-                else 
-                {
-                    isMounted = false;
-                    Vector2 unMountPosition = teammate.transform.position;
-                    transform.position = unMountPosition;
-                }
-            }
+        if (GameManager.Instance.IsInputEnabled()){
             handleMovement(control);    
         }
     }
@@ -125,7 +105,7 @@ public class Player : MonoBehaviour
             {
                 SetAnimationState(_animationSpecial);
             }
-            else if (control.magnitude != 0 && !isMounted)
+            else if (control.magnitude != 0)
             {
                 SetAnimationState(_animationRunning);
             }
@@ -196,12 +176,12 @@ public class Player : MonoBehaviour
     private IEnumerator InternalFreezeCoroutine()
     {
         // Freeze the player for 2 seconds
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.2f);
     }
 
     private void ShowFreezeIndicator()
     {
-        Vector3 spawnPosition = transform.position + Vector3.up * 1.1f + Vector3.left * 0.2f; // Adjust the Y coordinate as needed
+        Vector3 spawnPosition = transform.position + Vector3.up * 0.3f + Vector3.right * 0.2f; // Adjust the Y coordinate as needed
         freezeIndicator = Instantiate(freezeIndicatorPrefab, spawnPosition, Quaternion.identity);
     }
 
@@ -218,10 +198,6 @@ public class Player : MonoBehaviour
 
 
 
-    public bool getIsMounted()
-    {
-        return isMounted;
-    }
 
     void SetAnimationState(int state)
     {
@@ -231,21 +207,9 @@ public class Player : MonoBehaviour
 
     void handleMovement(Vector2 control)
     {
-        if (!isMounted && !isFrozen)
-        {
+        if (!isFrozen){
             rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
         }
-        else
-        {
-            Vector3 mountPosition;
-            if (playerNumber == 1){
-                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.right * 0.3f;
-    
-            }
-            else {
-                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.left * 0.3f;
-            }
-            transform.position = mountPosition;
-        }
     }
+
 }
