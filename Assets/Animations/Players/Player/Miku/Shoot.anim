@@ -21,27 +21,33 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -520553630, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.125
-      value: {fileID: -1804923958, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.25
-      value: {fileID: -50003229, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.375
-      value: {fileID: 656221922, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
+      value: {fileID: 520150652, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.071428575
+      value: {fileID: 1491880510, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.14285715
+      value: {fileID: -553153651, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.21428572
+      value: {fileID: 1949082657, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.2857143
+      value: {fileID: -1775711055, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.35714287
+      value: {fileID: 1250071631, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.42857143
+      value: {fileID: -838180443, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
     - time: 0.5
-      value: {fileID: 509888132, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.625
-      value: {fileID: 2065644038, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.75
-      value: {fileID: 562303578, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - time: 0.875
-      value: {fileID: 1020717717, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
+      value: {fileID: -574991881, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.5714286
+      value: {fileID: -1320425801, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.64285713
+      value: {fileID: 975594601, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - time: 0.71428573
+      value: {fileID: 94767019, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 8
+  m_SampleRate: 14
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -58,20 +64,23 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -520553630, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: -1804923958, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: -50003229, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: 656221922, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: 509888132, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: 2065644038, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: 562303578, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
-    - {fileID: 1020717717, guid: 0856b8d718567c142be66ae4e8714ab7, type: 3}
+    - {fileID: 520150652, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: 1491880510, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: -553153651, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: 1949082657, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: -1775711055, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: 1250071631, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: -838180443, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: -574991881, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: -1320425801, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: 975594601, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
+    - {fileID: 94767019, guid: f7bba6e2a50082e14bd30c409390c191, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.7857143
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,7 +100,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.35714287
     functionName: Shoot
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 78b05c2d476dcf74aa2eb33710d4e4d4, type: 3}
