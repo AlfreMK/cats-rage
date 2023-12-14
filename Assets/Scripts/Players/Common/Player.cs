@@ -28,9 +28,7 @@ public class Player : MonoBehaviour
     private string verticalKey;
     private string shootKey;
     private string punchKey;
-    private string mountKey;
 
-    private bool isMounted = false;
 
     private static readonly int _animationIdle = Animator.StringToHash("Idle");
     private static readonly int _animationAttacking = Animator.StringToHash("Shoot");
@@ -61,7 +59,6 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical";
             shootKey = "Shoot";
             punchKey = "Punch";
-            mountKey = "Mount";
         }
         else if (playerNumber == 2)
         {
@@ -69,7 +66,6 @@ public class Player : MonoBehaviour
             verticalKey = "Vertical2";
             shootKey = "Shoot2";
             punchKey = "Punch2";
-            mountKey = "Mount2";
         }
     }
     
@@ -87,22 +83,6 @@ public class Player : MonoBehaviour
             animationController();
         }
         if (GameManager.Instance.IsInputEnabled()){
-            if (Input.GetButtonDown(mountKey))
-            {
-                if (!isMounted)
-                {
-                    if (Vector2.Distance(transform.position, teammate.transform.position) < 2f && !teammate.isMounted)
-                    {
-                        isMounted = true;
-                    }
-                }
-                else 
-                {
-                    isMounted = false;
-                    Vector2 unMountPosition = teammate.transform.position;
-                    transform.position = unMountPosition;
-                }
-            }
             handleMovement(control);    
         }
     }
@@ -120,7 +100,7 @@ public class Player : MonoBehaviour
             {
                 SetAnimationState(_animationSpecial);
             }
-            else if (control.magnitude != 0 && !isMounted)
+            else if (control.magnitude != 0)
             {
                 SetAnimationState(_animationRunning);
             }
@@ -148,11 +128,6 @@ public class Player : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
     }
 
-    public bool getIsMounted()
-    {
-        return isMounted;
-    }
-
     void SetAnimationState(int state)
     {
         animator.CrossFade(state, 0, 0);
@@ -161,21 +136,7 @@ public class Player : MonoBehaviour
 
     void handleMovement(Vector2 control)
     {
-        if (!isMounted)
-        {
-            rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
-        }
-        else
-        {
-            Vector3 mountPosition;
-            if (playerNumber == 1){
-                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.right * 0.3f;
-    
-            }
-            else {
-                mountPosition = teammate.transform.position + Vector3.up * 1.4f + Vector3.left * 0.3f;
-            }
-            transform.position = mountPosition;
-        }
+        rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
     }
+
 }

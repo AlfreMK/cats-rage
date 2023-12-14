@@ -40,8 +40,8 @@ public class BothSides : MonoBehaviour
                 GameManager.Instance.SetMaxX(Mathf.Infinity);
                 Destroy(leftWall);
                 Destroy(rightWall);
-                Destroy(gameObject);
                 GameManager.Instance.GetMainCamera().MakeTransition();
+                Destroy(gameObject);
             }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 GameManager.Instance.GetMainCamera().setIsFollowing(false);
