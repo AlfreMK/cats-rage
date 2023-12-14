@@ -2501,7 +2501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465d9108c7392a14bb38342b007a298f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newLevel: Win
+  newLevel: Level4
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: 0788f4417025b6c46bf124494558e937, type: 2}
   player: {fileID: 0}
