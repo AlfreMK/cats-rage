@@ -26,8 +26,15 @@ public class Boss : MonoBehaviour, CanTakeDamage
     private static readonly int _animationDefeat = Animator.StringToHash("Defeat");
     private bool firstPhase = true;
     private bool secondPhase = false;
-    private bool isSpawningMeteors = false;
 
+    private bool thirdPhase = false;
+    private bool isMovingUp = false;
+
+    private float initialPosY;
+
+    private bool isDefeated = false;
+
+    private bool isSpawingMeteors = false;
     
     // Start is called before the first frame update
     void Start()
@@ -41,11 +48,68 @@ public class Boss : MonoBehaviour, CanTakeDamage
         b = !b;
     }
 
-    // IEnumerator Move(){
-        // TODO: Move the boss
-    // }
-
-
+    IEnumerator Move(){
+        if (isDefeated){
+            yield break;
+        }
+        while (secondPhase){
+            yield break;
+        } 
+        while (thirdPhase || firstPhase){
+            if (transform.position.y >= -3.3f){
+                isMovingUp = false;
+            }
+            else if (transform.position.y <= -4.3f){
+                isMovingUp = true;
+            }
+            else {
+                if (Random.value >= 0.5)
+                {
+                    isMovingUp = true;
+                }
+                else{
+                    isMovingUp = false;
+                }
+            }
+            int[] numbers = new int[3] {1, 2, 3};
+            int myRandom = numbers[Random.Range(0,3)];
+            int iter = 0;
+            while (iter < myRandom){
+                if (isMovingUp){
+                    float time = 0;
+                    float nextY = transform.position.y + 0.1f;
+                    if (nextY >= -3.3f){
+                        nextY = -3.3f;
+                    }
+                    while (time < 1)
+                    {
+                        time += Time.deltaTime;
+                        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
+                        yield return null;
+                    }
+                    yield return new WaitForSeconds(0.5f);
+                }
+                else{
+                    float time = 0;
+                    float nextY = transform.position.y - 0.1f;
+                    if (nextY <= -4.3f){
+                        nextY = -4.3f;
+                    }
+                    while (time < 1)
+                    {
+                        time += Time.deltaTime;
+                        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
+                        yield return null;
+                    }
+                    yield return new WaitForSeconds(0.5f);
+                }
+                if (secondPhase){
+                    iter = 3;
+                }
+                iter++;
+            }
+        }
+    }
 
 
     public void TakeDamage(int damage) {
@@ -57,10 +121,17 @@ public class Boss : MonoBehaviour, CanTakeDamage
         lifeBoss -= damage;
         if (lifeBoss <= 0) {
             lifeBoss = 0;
+            StopCoroutine("SpawnMeteors");
+            StopCoroutine("EnemyBehaviour");
+            StopCoroutine("Move");
+            isDefeated = true;
+            Destroy(consistencyWall);
+            Destroy(fire);
             SetAnimationState(_animationDefeat);
             Destroy(gameObject, 2.3f);
         }
         if (lifeBoss <= 700 && firstPhase){
+            StartCoroutine(RedoPos());
             firstPhase = false;
             secondPhase = true;
         }
@@ -84,6 +155,9 @@ public class Boss : MonoBehaviour, CanTakeDamage
         while (true)
         {
             // yield return Move();
+            if (isDefeated){
+                yield break;
+            }
             if (firstPhase){
                 SetAnimationState(_animationAttack);
                 yield return new WaitForSeconds(2.0f);
@@ -99,14 +173,21 @@ public class Boss : MonoBehaviour, CanTakeDamage
                         yield return new WaitForSeconds(1.0f);
                     }
                     else{
-                        if (!isSpawningMeteors)
-                            {
-                                isSpawningMeteors = true;
-                                StartCoroutine(SpawnMeteors());
-                            }
+                        if (!isSpawingMeteors){
+                            StartCoroutine("SpawnMeteors");
+                        }
                         yield return new WaitForSeconds(1.0f);
                     }
                 }
+            }
+
+            else if (thirdPhase){
+                SetAnimationState(_animationAttack);
+                yield return new WaitForSeconds(1.0f);
+            }
+            else{
+                SetAnimationState(_animationIdle);
+                yield return new WaitForSeconds(1.0f);
             }
 
         }
@@ -125,6 +206,13 @@ public class Boss : MonoBehaviour, CanTakeDamage
                 shield.SetActive(true);
             }
         }
+        else if (thirdPhase && shield.activeSelf){
+            shield.SetActive(false);
+        }
+        else if (thirdPhase && !shield.activeSelf){
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+
     }
 
     void makeIdle(){
@@ -132,17 +220,20 @@ public class Boss : MonoBehaviour, CanTakeDamage
     }
 
     public void startAttacking(){
-        StartCoroutine(EnemyBehaviour());
+        initialPosY = transform.position.y;
+        StartCoroutine("EnemyBehaviour");
+        StartCoroutine("Move");
     }
 
     IEnumerator SpawnMeteors()
     {
-        float duration = 25.0f;
-        float timer = 0f;
+        isSpawingMeteors = true;
+        StartCoroutine("StartLastPhase");
+        
 
-        while (timer < duration)
+        while (!isDefeated)
         {
-            yield return new WaitForSeconds(Random.Range(0.5f, 2.0f));
+            yield return new WaitForSeconds(Random.Range(0.7f, 1.8f));
 
             // Choose a random shadow that is not currently active
             GameObject randomShadow = GetRandomInactiveShadow();
@@ -154,10 +245,15 @@ public class Boss : MonoBehaviour, CanTakeDamage
                 StartCoroutine(ShadowAnimation(randomShadow));
             }
 
-            timer += 1.0f;
         }
+    }
 
-        isSpawningMeteors = false;
+    IEnumerator StartLastPhase(){
+        yield return new WaitForSeconds(20.0f);
+        shield.SetActive(false);
+        secondPhase = false;
+        thirdPhase = true;
+        StartCoroutine("Move");
     }
 
     GameObject GetRandomInactiveShadow()
@@ -184,6 +280,17 @@ public class Boss : MonoBehaviour, CanTakeDamage
         {
             shadow.transform.localScale = new Vector3(0.1f, 0.1f, 1) * (time / 3.0f);
             time += Time.deltaTime;
+            yield return null;
+        }
+    }
+    IEnumerator RedoPos()
+    {
+        float time = 0;
+        float nextY = initialPosY;
+        while (time < 1)
+        {
+            time += Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
             yield return null;
         }
     }

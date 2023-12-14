@@ -34,14 +34,15 @@ public class BossFightOne : MonoBehaviour
     void Update()
     {
         if (hasTriggered) {
-            // if (enemiesSpawned == enemiesToSpawn && enemiesAlive == 0)
-            // {
-            //     GameManager.Instance.SetMaxX(Mathf.Infinity);
-            //     Destroy(leftWall);
-            //     Destroy(rightWall);
-            //     GameManager.Instance.GetMainCamera().MakeTransition();
-            //     Destroy(gameObject);
-            // }
+            if (boss.lifeBoss <= 0)
+            {
+                GameManager.Instance.SetMaxX(Mathf.Infinity);
+                Destroy(leftWall);
+                Destroy(rightWall);
+                GameManager.Instance.GetMainCamera().MakeTransition();
+                Destroy(gameObject, 2.4f);
+                mainMusic.Play();
+            }
             if (GameManager.Instance.IsCameraInMaxX() && !hasSpawned){
                 Player player1 = GameManager.Instance.GetPlayer1Script();
                 Player player2 = GameManager.Instance.GetPlayer2Script();

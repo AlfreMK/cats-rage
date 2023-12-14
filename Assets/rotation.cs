@@ -34,6 +34,18 @@ public class rotation : MonoBehaviour
 	    if (hitInfo.gameObject.name == shadowObjName){
             Instantiate(explosionPrefab, transform.position + (explosionPrefab.transform.up), Quaternion.identity);
             hitInfo.gameObject.SetActive(false);
+            float explosionRadius = 1.3f;
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+            for(var hit_index = 0; hit_index < hitColliders.Length; hit_index++)
+            {
+                if (hitColliders[hit_index].gameObject.GetComponent<Player>() != null) {
+                    hitColliders[hit_index].gameObject.GetComponent<Player>().TakeDamage(20);
+                }
+                else if (hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>() != null)
+                {
+                    hitColliders[hit_index].gameObject.GetComponent<CanTakeDamage>().TakeDamage(100);
+                }
+            }
             Destroy(gameObject);
         }
     }
