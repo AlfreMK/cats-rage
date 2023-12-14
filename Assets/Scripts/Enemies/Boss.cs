@@ -61,7 +61,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
             if (transform.position.y >= -3.3f){
                 isMovingUp = false;
             }
-            else if (transform.position.y <= -4.3f){
+            else if (transform.position.y <= -4.5f){
                 isMovingUp = true;
             }
             else {
@@ -79,7 +79,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
             while (iter < myRandom){
                 if (isMovingUp){
                     float time = 0;
-                    float nextY = transform.position.y + 0.1f;
+                    float nextY = transform.position.y + 0.15f;
                     if (nextY >= -3.3f){
                         nextY = -3.3f;
                     }
@@ -89,13 +89,13 @@ public class Boss : MonoBehaviour, CanTakeDamage
                         transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
                         yield return null;
                     }
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.2f);
                 }
                 else{
                     float time = 0;
-                    float nextY = transform.position.y - 0.1f;
-                    if (nextY <= -4.3f){
-                        nextY = -4.3f;
+                    float nextY = transform.position.y - 0.2f;
+                    if (nextY <= -4.5f){
+                        nextY = -4.5f;
                     }
                     while (time < 1)
                     {
@@ -103,7 +103,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
                         transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, nextY, time), transform.position.z);
                         yield return null;
                     }
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.2f);
                 }
                 if (secondPhase){
                     iter = 3;
@@ -162,7 +162,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
             }
             if (firstPhase){
                 SetAnimationState(_animationAttack);
-                yield return new WaitForSeconds(2.0f);
+                yield return new WaitForSeconds(1.5f);
             }
             else if (secondPhase){
                 if (!shield.activeSelf){

@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1672955
 Transform:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &186587368
 Transform:
   m_ObjectHideFlags: 0
@@ -2159,7 +2159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &618761748
 Transform:
   m_ObjectHideFlags: 0
@@ -2838,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 1629383943}
     - target: {fileID: 2650494184269056422, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
       propertyPath: verticalSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2650494184269056422, guid: 38e392559cfdd964ba5366e7ee29473d, type: 3}
       propertyPath: horizontalSpeed
@@ -4740,6 +4740,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 524949057
       objectReference: {fileID: 0}
+    - target: {fileID: 4798167217932855364, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.854
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798167217932855364, guid: e07f386fd08caa64081b931df1711e65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.168
+      objectReference: {fileID: 0}
     - target: {fileID: 7618822463058344901, guid: e07f386fd08caa64081b931df1711e65, type: 3}
       propertyPath: m_Name
       value: boss
@@ -5389,7 +5397,7 @@ PrefabInstance:
       objectReference: {fileID: 853828939}
     - target: {fileID: 1100370251934644795, guid: cead3c9598f0a024f946be9047133e11, type: 3}
       propertyPath: verticalSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1100370251934644795, guid: cead3c9598f0a024f946be9047133e11, type: 3}
       propertyPath: horizontalSpeed
