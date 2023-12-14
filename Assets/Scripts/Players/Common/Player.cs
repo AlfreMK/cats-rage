@@ -176,12 +176,12 @@ public class Player : MonoBehaviour
     private IEnumerator InternalFreezeCoroutine()
     {
         // Freeze the player for 2 seconds
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.2f);
     }
 
     private void ShowFreezeIndicator()
     {
-        Vector3 spawnPosition = transform.position + Vector3.up * 1.1f + Vector3.left * 0.2f; // Adjust the Y coordinate as needed
+        Vector3 spawnPosition = transform.position + Vector3.up * 0.3f + Vector3.right * 0.2f; // Adjust the Y coordinate as needed
         freezeIndicator = Instantiate(freezeIndicatorPrefab, spawnPosition, Quaternion.identity);
     }
 
@@ -198,10 +198,6 @@ public class Player : MonoBehaviour
 
 
 
-    public bool getIsMounted()
-    {
-        return isMounted;
-    }
 
     void SetAnimationState(int state)
     {
@@ -211,7 +207,9 @@ public class Player : MonoBehaviour
 
     void handleMovement(Vector2 control)
     {
-        rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
+        if (!isFrozen){
+            rb.velocity = new Vector2(control.x * horizontalSpeed, control.y * verticalSpeed);    
+        }
     }
 
 }
