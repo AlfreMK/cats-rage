@@ -170,13 +170,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesToSpawn: 4
-  spawnRateInMs: 2000
+  spawnRateInMs: 2500
   enemyType: {fileID: 8580298596709201853, guid: f223385c86820b545baa360a77251ffa, type: 3}
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
   yMaxGroundHeight: -2.25
   Arr: {fileID: 1043869064}
+  Portal: {fileID: 5234484255576868908, guid: f593e760f1b1a1b4aa1df1928ec9931b, type: 3}
 --- !u!61 &1672957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -680,6 +681,7 @@ MonoBehaviour:
   enemiesComingFromBothSides: 1
   yMaxGroundHeight: -2.25
   Arr: {fileID: 1043869064}
+  Portal: {fileID: 5234484255576868908, guid: f593e760f1b1a1b4aa1df1928ec9931b, type: 3}
 --- !u!1 &205866098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,6 +2195,7 @@ MonoBehaviour:
   enemiesComingFromBothSides: 1
   yMaxGroundHeight: -2.25
   Arr: {fileID: 1043869064}
+  Portal: {fileID: 2050561467079583186, guid: d8207af015725204b8ee69b10a6d6cfc, type: 3}
 --- !u!61 &618761750
 BoxCollider2D:
   m_ObjectHideFlags: 0

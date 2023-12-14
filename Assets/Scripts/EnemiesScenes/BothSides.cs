@@ -23,6 +23,7 @@ public class BothSides : MonoBehaviour
     private float initialPosX;
 
     public GameObject Arr;
+    public GameObject Portal;
 
     // Start is called before the first frame update
     void Start()
@@ -74,11 +75,11 @@ public class BothSides : MonoBehaviour
             // spawn left, then right and repeat
             if (enemiesSpawned % 2 == 0 && enemiesComingFromBothSides)
             {
-                SpawnRandomEnemy(leftWall.transform.position.x + 0.5f);
+                SpawnRandomEnemy(leftWall.transform.position.x + 0.5f, 0);
             }
             else
             {
-                SpawnRandomEnemy(rightWall.transform.position.x - 0.5f);
+                SpawnRandomEnemy(rightWall.transform.position.x - 0.5f, 180);
             }
             enemiesSpawned++;
             enemiesAlive++;
@@ -86,7 +87,7 @@ public class BothSides : MonoBehaviour
     }
 
 
-    void SpawnRandomEnemy(float x)
+    void SpawnRandomEnemy(float x, float rotation)
     {
         GameObject enemyPrefab = null;
         float groundYPosition = Random.Range(-5.0f, yMaxGroundHeight);
@@ -104,7 +105,17 @@ public class BothSides : MonoBehaviour
             enemyPrefab = flyingEnemy ? enemyFlyingType : enemyType;
             yPosition = flyingEnemy ? flyingYPosition : groundYPosition;
         }
+        GameObject po = Instantiate(Portal, new Vector2(x, yPosition + 0.5f), Quaternion.Euler(new Vector3(0, rotation, 0)));
+        float offset = 0.8f;
+        if (rotation == 180) {
+            offset = -0.8f;
+        }
+        StartCoroutine(spawnWithDelay(x + offset, yPosition, enemyPrefab));
+    }
 
+    IEnumerator spawnWithDelay(float x, float yPosition, GameObject enemyPrefab)
+    {
+        yield return new WaitForSeconds(1);
         GameObject enemy = Instantiate(enemyPrefab, new Vector2(x, yPosition), Quaternion.identity);
         enemy.tag = "EnemyBothSides";
     }
