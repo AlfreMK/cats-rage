@@ -11,6 +11,13 @@ public class Boss : MonoBehaviour, CanTakeDamage
     [SerializeField] public GameObject consistencyWall;
     [SerializeField] public GameObject fire;
     [SerializeField] public GameObject shield;
+    [SerializeField] public GameObject[] woolShadows;
+
+    [SerializeField] public GameObject meteorPrefab;
+
+
+
+
     private Animator animator;
     private Rigidbody2D rb;
     // private bool isMovingUp = true;
@@ -19,6 +26,7 @@ public class Boss : MonoBehaviour, CanTakeDamage
     private static readonly int _animationDefeat = Animator.StringToHash("Defeat");
     private bool firstPhase = true;
     private bool secondPhase = false;
+    private bool isSpawningMeteors = false;
 
     
     // Start is called before the first frame update
@@ -41,6 +49,11 @@ public class Boss : MonoBehaviour, CanTakeDamage
 
 
     public void TakeDamage(int damage) {
+        if (shield.activeSelf){
+            GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+            StartCoroutine(ResetColor());
+            return;
+        }
         lifeBoss -= damage;
         if (lifeBoss <= 0) {
             lifeBoss = 0;
@@ -86,6 +99,11 @@ public class Boss : MonoBehaviour, CanTakeDamage
                         yield return new WaitForSeconds(1.0f);
                     }
                     else{
+                        if (!isSpawningMeteors)
+                            {
+                                isSpawningMeteors = true;
+                                StartCoroutine(SpawnMeteors());
+                            }
                         yield return new WaitForSeconds(1.0f);
                     }
                 }
@@ -115,5 +133,58 @@ public class Boss : MonoBehaviour, CanTakeDamage
 
     public void startAttacking(){
         StartCoroutine(EnemyBehaviour());
+    }
+
+    IEnumerator SpawnMeteors()
+    {
+        float duration = 25.0f;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            yield return new WaitForSeconds(Random.Range(0.5f, 2.0f));
+
+            // Choose a random shadow that is not currently active
+            GameObject randomShadow = GetRandomInactiveShadow();
+            if (randomShadow != null)
+            {
+                // Spawn a meteor at a specific Y position (replace 'yPosition' with the desired Y coordinate)
+                InstantiateMeteor(randomShadow.transform.position.x + 0.4f, randomShadow.transform.position.y + 30, randomShadow);
+                randomShadow.SetActive(true);
+                StartCoroutine(ShadowAnimation(randomShadow));
+            }
+
+            timer += 1.0f;
+        }
+
+        isSpawningMeteors = false;
+    }
+
+    GameObject GetRandomInactiveShadow()
+    {
+        // Filter out currently active shadows
+        GameObject[] inactiveShadows = System.Array.FindAll(woolShadows, shadow => !shadow.activeSelf);
+
+        // Return a random inactive shadow
+        return inactiveShadows.Length > 0 ? inactiveShadows[Random.Range(0, inactiveShadows.Length)] : null;
+    }
+
+    void InstantiateMeteor(float xPosition, float yPosition, GameObject shadow)
+    {
+        // Instantiate the meteor at the specified position
+        // Replace 'meteorPrefab' with the actual meteor prefab you want to use
+        rotation meteorPrefabScript = meteorPrefab.GetComponent<rotation>();
+        meteorPrefabScript.Spawn(new Vector3(xPosition, yPosition, 0), transform.position, shadow);
+    }
+
+    IEnumerator ShadowAnimation(GameObject shadow)
+    {
+        float time = 0;
+        while (time < 3.0f)
+        {
+            shadow.transform.localScale = new Vector3(0.1f, 0.1f, 1) * (time / 3.0f);
+            time += Time.deltaTime;
+            yield return null;
+        }
     }
 }
