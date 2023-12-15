@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f168c5aa9929e43b53aadcd96c5d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: 3
+  enemiesToSpawn: 2
   spawnRateInMs: 4000
   enemyType: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
   enemyFlyingType: {fileID: 0}

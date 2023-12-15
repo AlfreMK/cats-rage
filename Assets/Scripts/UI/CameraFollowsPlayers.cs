@@ -73,7 +73,11 @@ public class CameraFollowsPlayers : MonoBehaviour
         float time = 0;
         while (time < 1)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime * 2;
+            if (time > 1)
+            {
+                time = 1;
+            }
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, leftPlayer.transform.position.x - maxDistanceToLeftPlayer.x, time), 0, -10);
             yield return null;
         }
