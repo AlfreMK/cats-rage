@@ -169,13 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f168c5aa9929e43b53aadcd96c5d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: 3
+  enemiesToSpawn: 4
   spawnRateInMs: 5000
   enemyType: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
-  yMaxGroundHeight: -1.95
+  yMaxGroundHeight: -2.5
   Arr: {fileID: 101908207}
   Portal: {fileID: 2050561467079583186, guid: d8207af015725204b8ee69b10a6d6cfc, type: 3}
 --- !u!61 &1672957
@@ -577,7 +577,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
-  yMaxGroundHeight: -1.95
+  yMaxGroundHeight: -2.5
   Arr: {fileID: 101908207}
   Portal: {fileID: 5234484255576868908, guid: f593e760f1b1a1b4aa1df1928ec9931b, type: 3}
 --- !u!4 &249354478 stripped
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
-  yMaxGroundHeight: -1.95
+  yMaxGroundHeight: -2.5
   Arr: {fileID: 101908207}
   Portal: {fileID: 5234484255576868908, guid: f593e760f1b1a1b4aa1df1928ec9931b, type: 3}
 --- !u!61 &618761750
