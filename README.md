@@ -17,16 +17,16 @@
 
 ## Controls
 
+- `Esc`: Pause
+
 ### First player
 
 - `WASD`: Move
-- `V`: Shoot
-- `G`: Punch
-- `R`: Mount
+- `B`: Shoot
+- `V`: Throw grenade
 
 ### Second player
 
 - Arrow keys: Move
-- `M`: Shoot
-- `J`: Heal
-- `N`: Mount
+- `P`: Shoot
+- `O`: Heal

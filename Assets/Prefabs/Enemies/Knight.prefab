@@ -157,9 +157,10 @@ MonoBehaviour:
   health: 100
   audioSource: {fileID: 8821313006224440857}
   swordSwing: {fileID: 8300000, guid: 4087feb4da5eae445b083fe529e14cbb, type: 3}
-  damageSword: 20
-  moveSpeed: 1.5
+  damageSword: 30
+  moveSpeed: 3
   attackCooldown: 2
+  moveCooldown: 1.2
   attackPos: {fileID: 6296261256271042245}
   attackRange: 0.79
   WhatIsPlayer:

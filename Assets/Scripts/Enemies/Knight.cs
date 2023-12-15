@@ -11,11 +11,13 @@ public class Knight : MonoBehaviour, CanTakeDamage
     public AudioSource audioSource;
     public AudioClip swordSwing;
 
-    public int damageSword = 20;
+    public int damageSword = 30;
 
-    public float moveSpeed = 0.01f;
+    public float moveSpeed = 3f;
     public float attackCooldown = 2.0f; // Adjust the cooldown time as needed
+    public float moveCooldown = 1.2f; // Adjust the cooldown time as needed
     private float attackTimer;
+    private float moveTimer;
     public Transform attackPos;
     public float attackRange;
     public LayerMask WhatIsPlayer;
@@ -39,21 +41,29 @@ public class Knight : MonoBehaviour, CanTakeDamage
         randomPlayer = Random.Range(0, 2) == 0 ? player1 : player2;
 
         attackTimer = attackCooldown; // Set initial timer value to trigger the first attack
+        moveTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (moveTimer > 0 )
+        {
+            moveTimer -= Time.deltaTime;
+            return;
+        }
         MoveToPlayer();
         RotateTowardsPlayer();
 
         // Update the attack timer
         attackTimer -= Time.deltaTime;
-        if (attackTimer <= 0)
+        if (attackTimer <= 0 && Vector3.Distance(transform.position, randomPlayer.position) < 1.2f)
         {
             SetAnimationState(_animationAttack);
             Attack();
             attackTimer = attackCooldown; // Reset the timer after an attack
+            moveTimer = moveCooldown;
+            StartCoroutine(ResetAnimationState(_animationIdle, 1.2f));
         }
     }
 
@@ -122,4 +132,17 @@ public class Knight : MonoBehaviour, CanTakeDamage
         }
     }
 
+    IEnumerator ResetAnimationState(int state, float time)
+    {
+        yield return new WaitForSeconds(time);
+        SetAnimationState(state);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Player>() != null)
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
+    }
 }

@@ -1449,6 +1449,18 @@ PrefabInstance:
       propertyPath: wall
       value: 
       objectReference: {fileID: 2085859085}
+    - target: {fileID: 2086125851957312037, guid: 47508eff6b43ac2429fb5a5834ad53e6, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 3826293944368797845, guid: 411c8604856755347ab22cd2ff704255, type: 3}
+    - target: {fileID: 2086125851957312037, guid: 47508eff6b43ac2429fb5a5834ad53e6, type: 3}
+      propertyPath: spawnRateInMs
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2086125851957312037, guid: 47508eff6b43ac2429fb5a5834ad53e6, type: 3}
+      propertyPath: enemiesToSpawn
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3098416999585318289, guid: 47508eff6b43ac2429fb5a5834ad53e6, type: 3}
       propertyPath: m_Name
       value: EnemiesBothSides (1)
@@ -1830,12 +1842,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2085859085}
     - target: {fileID: 7427313147597803032, guid: 3e1a25ad5e406d14984746378c8a21db, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 6762699510638473245, guid: 9faa6620b8ce91b4fb78caf0dddbb7d3, type: 3}
+    - target: {fileID: 7427313147597803032, guid: 3e1a25ad5e406d14984746378c8a21db, type: 3}
       propertyPath: spawnRateInMs
-      value: 2500
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 7427313147597803032, guid: 3e1a25ad5e406d14984746378c8a21db, type: 3}
       propertyPath: enemiesToSpawn
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2747,11 +2763,11 @@ PrefabInstance:
       objectReference: {fileID: 2085859085}
     - target: {fileID: 763605782224510140, guid: 860ae7d81497c9b478ff97e668e514ef, type: 3}
       propertyPath: spawnRateInMs
-      value: 2500
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 763605782224510140, guid: 860ae7d81497c9b478ff97e668e514ef, type: 3}
       propertyPath: enemiesToSpawn
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1720668307471430463, guid: 860ae7d81497c9b478ff97e668e514ef, type: 3}
       propertyPath: m_LocalPosition.x

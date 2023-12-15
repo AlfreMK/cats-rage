@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f168c5aa9929e43b53aadcd96c5d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: 4
-  spawnRateInMs: 1000
+  enemiesToSpawn: 3
+  spawnRateInMs: 5000
   enemyType: {fileID: 6517705194321101100, guid: 9549497bd9b0eaa4d82bf54a4a557edc, type: 3}
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesToSpawn: 4
-  spawnRateInMs: 1000
+  spawnRateInMs: 2000
   enemyType: {fileID: 3826293944368797845, guid: 411c8604856755347ab22cd2ff704255, type: 3}
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
@@ -1086,9 +1086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f168c5aa9929e43b53aadcd96c5d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: 6
-  spawnRateInMs: 1000
-  enemyType: {fileID: 3826293944368797845, guid: 411c8604856755347ab22cd2ff704255, type: 3}
+  enemiesToSpawn: 3
+  spawnRateInMs: 4000
+  enemyType: {fileID: 8580298596709201853, guid: f223385c86820b545baa360a77251ffa, type: 3}
   enemyFlyingType: {fileID: 0}
   wall: {fileID: 1940347278}
   enemiesComingFromBothSides: 1
