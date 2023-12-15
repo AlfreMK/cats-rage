@@ -51,7 +51,6 @@ public class Knight : MonoBehaviour, CanTakeDamage
         attackTimer -= Time.deltaTime;
         if (attackTimer <= 0)
         {
-            SetAnimationState(_animationAttack);
             Attack();
             attackTimer = attackCooldown; // Reset the timer after an attack
         }
@@ -59,10 +58,13 @@ public class Knight : MonoBehaviour, CanTakeDamage
 
     void Attack()
     {
-        SetAnimationState(_animationAttack);
-        audioSource.PlayOneShot(swordSwing, 1f);
 
         Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, WhatIsPlayer);
+        if (playersToDamage.Length > 0)
+        {
+            animator.SetTrigger("Attack");
+            audioSource.PlayOneShot(swordSwing, 1f);
+        }
         for (int i = 0; i < playersToDamage.Length; i++)
         {
             playersToDamage[i].GetComponent<Player>().TakeDamage(damageSword);
@@ -112,8 +114,9 @@ public class Knight : MonoBehaviour, CanTakeDamage
     {
         Vector3 playerPosition = randomPlayer.position;
 
-        if (Vector3.Distance(transform.position, playerPosition) < 1.2f)
+        if (Vector3.Distance(transform.position, playerPosition) < 1.5f)
         {
+
         }
         else
         {
